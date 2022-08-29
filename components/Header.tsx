@@ -21,7 +21,7 @@ const Header = (props: any) => {
       <TouchableOpacity style={styles.leftContainer} onPress={leftIconPress}>
         <Icon name={leftIcon ? leftIcon : 'menu'} style={styles.leftIcon} />
       </TouchableOpacity>
-      <View>
+      <View style={styles.titleContainer}>
         <Text style={styles.title}>{title}</Text>
       </View>
       <TouchableOpacity style={styles.rightContainer} onPress={rightIconPress}>
@@ -53,6 +53,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 14,
   },
+  titleContainer: {
+    width: '40%',
+  },
   leftIcon: {
     color: COLORS.DEFAULT_COLOR,
     fontSize: 28,
@@ -60,19 +63,19 @@ const styles = StyleSheet.create({
   title: {
     color: '#fff',
     fontSize: 18,
-    fontFamily: FONTS.regular,
+    fontFamily: FONTS.bold,
+    textAlign: 'center',
   },
   rightContainer: {
-    width: 33,
-    height: 33,
-    borderRadius: 50,
-    borderWidth: 1,
-    borderColor: '#fff',
+    width: 30,
+    height: 32,
+    borderRadius: 14,
+    backgroundColor: '#fff',
     justifyContent: 'center',
     alignItems: 'center',
   },
   rightIcon: {
-    color: '#fff',
+    color: COLORS.DEFAULT_COLOR,
     fontSize: 22,
   },
   dot: {

@@ -72,3 +72,18 @@ export const FoodData = [
     name: 'Хар цай',
   },
 ];
+
+export const MenuListData = [
+  {
+    icon: '',
+    name: 'Хоолны цэс боловсруулах',
+  },
+  {
+    icon: '',
+    name: 'Миний хадгалсан жор',
+  },
+  {
+    icon: '',
+    name: 'Жишиг цэс',
+  },
+];
