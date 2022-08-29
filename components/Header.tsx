@@ -1,0 +1,87 @@
+import {
+  ImageBackground,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+import React from 'react';
+import Icon from 'react-native-vector-icons/Entypo';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import {COLORS, FONTS} from '../constants';
+import {setHeight} from '../utils/Dimension';
+
+const Header = (props: any) => {
+  const {title, leftIcon, rightIcon, leftIconPress, rightIconPress} = props;
+  return (
+    <ImageBackground
+      resizeMode="cover"
+      source={require('../assets/images/header.png')}
+      style={styles.image}>
+      <TouchableOpacity style={styles.leftContainer} onPress={leftIconPress}>
+        <Icon name={leftIcon ? leftIcon : 'menu'} style={styles.leftIcon} />
+      </TouchableOpacity>
+      <View>
+        <Text style={styles.title}>{title}</Text>
+      </View>
+      <TouchableOpacity style={styles.rightContainer} onPress={rightIconPress}>
+        <MaterialIcons
+          name={rightIcon ? rightIcon : 'notifications'}
+          style={styles.rightIcon}
+        />
+        <View style={styles.dot} />
+      </TouchableOpacity>
+    </ImageBackground>
+  );
+};
+
+export default Header;
+
+const styles = StyleSheet.create({
+  image: {
+    height: setHeight(20),
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 30,
+    paddingTop: setHeight(5),
+  },
+  leftContainer: {
+    backgroundColor: '#fff',
+    height: 32,
+    width: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 14,
+  },
+  leftIcon: {
+    color: COLORS.DEFAULT_COLOR,
+    fontSize: 28,
+  },
+  title: {
+    color: '#fff',
+    fontSize: 18,
+    fontFamily: FONTS.regular,
+  },
+  rightContainer: {
+    width: 33,
+    height: 33,
+    borderRadius: 50,
+    borderWidth: 1,
+    borderColor: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  rightIcon: {
+    color: '#fff',
+    fontSize: 22,
+  },
+  dot: {
+    height: 10,
+    width: 10,
+    borderRadius: 50,
+    position: 'absolute',
+    backgroundColor: '#61D644',
+    right: 5,
+    top: 5,
+  },
+});
