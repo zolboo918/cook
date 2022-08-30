@@ -1,12 +1,12 @@
 import React from 'react';
 import {FlatList, ScrollView, StyleSheet, Text, View} from 'react-native';
 import ChartItem from '../components/ChartItem';
-import FoodItem from '../components/CardItem';
 import Header from '../components/Header';
 import Tab from '../components/Tab';
 import {COLORS, FONTS} from '../constants';
 import {FoodData, HomeStatData, HomeTab} from '../data/data';
 import {getHeight} from '../utils/Dimension';
+import CardItem from '../components/CardItem';
 
 const Home = () => {
   const data = {
@@ -46,7 +46,7 @@ const Home = () => {
           style={{marginTop: 30}}
           data={FoodData}
           keyExtractor={({item, index}: any) => index}
-          renderItem={({item}: any) => <FoodItem item={item} />}
+          renderItem={({item}: any) => <CardItem item={item} />}
         />
       </View>
     </ScrollView>

@@ -5,6 +5,10 @@ import {SafeAreaView, StatusBar, StyleSheet, View} from 'react-native';
 import {COLORS} from '../constants';
 import Home from '../screens/Home';
 import BottomNavigation from './BottomNavigation';
+import ProcessFoodMenuList from '../screens/menu/ProcessFoodMenuList';
+import SavedReceipt from '../screens/menu/SavedReceipt';
+import ExampleMenu from '../screens/menu/ExampleMenu';
+import ProcessFoodMenuDetail from '../screens/menu/ProcessFoodMenuDetail';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +20,26 @@ function StackNavigation() {
           <Stack.Screen
             name="BottomNavigation"
             component={BottomNavigation}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="ProcessFoodMenu"
+            component={ProcessFoodMenuList}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="ProcessFoodMenuDetail"
+            component={ProcessFoodMenuDetail}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="SavedReceipt"
+            component={SavedReceipt}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="ExampleMenu"
+            component={ExampleMenu}
             options={{headerShown: false}}
           />
         </Stack.Navigator>

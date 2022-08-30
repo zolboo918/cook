@@ -1,4 +1,4 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {setHeight, setWidth} from '../utils/Dimension';
 import {COLORS, FONTS} from '../constants';
@@ -7,9 +7,9 @@ import LinearGradient from 'react-native-linear-gradient';
 import MaskedView from '@react-native-community/masked-view';
 
 const CardItem = (props: any) => {
-  const {item} = props;
+  const {item, iconColor, onItemPress} = props;
   return (
-    <View style={styles.itemContainer}>
+    <TouchableOpacity style={styles.itemContainer} onPress={onItemPress}>
       <Image
         source={item.picture}
         style={styles.image}
@@ -22,18 +22,22 @@ const CardItem = (props: any) => {
           <Text style={styles.type}>{item.type}</Text>
           <Text style={styles.name}>{item.name}</Text>
         </View>
-        <MaskedView
-          style={{flex: 1, flexDirection: 'row', height: 40}}
-          maskElement={
-            <View
-              style={{backgroundColor: 'transparent', alignSelf: 'flex-end'}}>
-              <Icon name="chevron-right" style={styles.icon} />
-            </View>
-          }>
-          <LinearGradient colors={['#F15A24', '#FFBD08']} style={{flex: 1}} />
-        </MaskedView>
+        {iconColor == COLORS.DEFAULT_COLOR ? (
+          <Icon name="chevron-right" style={styles.icon} />
+        ) : (
+          <MaskedView
+            style={{flex: 1, flexDirection: 'row', height: 40}}
+            maskElement={
+              <View
+                style={{backgroundColor: 'transparent', alignSelf: 'flex-end'}}>
+                <Icon name="chevron-right" style={styles.icon} />
+              </View>
+            }>
+            <LinearGradient colors={['#F15A24', '#FFBD08']} style={{flex: 1}} />
+          </MaskedView>
+        )}
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -84,5 +88,6 @@ const styles = StyleSheet.create({
   icon: {
     marginTop: 8,
     fontSize: 35,
+    color: COLORS.DEFAULT_COLOR,
   },
 });

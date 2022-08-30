@@ -4,7 +4,7 @@ import {Platform, StatusBar, StyleSheet, Text} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Home from '../screens/Home';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Menu from '../screens/Menu';
+import Menu from '../screens/menu/Menu';
 import Requirement from '../screens/Requirement';
 import Health from '../screens/Health';
 import {COLORS} from '../constants';

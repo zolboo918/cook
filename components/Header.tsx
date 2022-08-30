@@ -18,15 +18,26 @@ const Header = (props: any) => {
       resizeMode="cover"
       source={require('../assets/images/header.png')}
       style={styles.image}>
-      <TouchableOpacity style={styles.leftContainer} onPress={leftIconPress}>
-        <Icon name={leftIcon ? leftIcon : 'menu'} style={styles.leftIcon} />
+      <TouchableOpacity
+        style={[
+          styles.leftContainer,
+          {backgroundColor: leftIcon == 'back' ? undefined : '#fff'},
+        ]}
+        onPress={leftIconPress}>
+        <Icon
+          name={leftIcon == 'back' ? 'chevron-left' : 'menu'}
+          style={[
+            styles.leftIcon,
+            {color: leftIcon == 'back' ? '#fff' : COLORS.DEFAULT_COLOR},
+          ]}
+        />
       </TouchableOpacity>
       <View style={styles.titleContainer}>
         <Text style={styles.title}>{title}</Text>
       </View>
       <TouchableOpacity style={styles.rightContainer} onPress={rightIconPress}>
         <MaterialIcons
-          name={rightIcon ? rightIcon : 'notifications'}
+          name={rightIcon ? rightIcon : 'notifications-none'}
           style={styles.rightIcon}
         />
         <View style={styles.dot} />

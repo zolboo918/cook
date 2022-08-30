@@ -1,25 +1,47 @@
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {COLORS, FONTS} from '../constants';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const Tab = (props: any) => {
-  const {items} = props;
+  const {items, containerStyle, active, onPress} = props;
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, containerStyle]}>
       {items.map((el: any, index: any) => {
         return (
           <TouchableOpacity
             key={index}
+            onPress={() => onPress(index)}
             style={[
               styles.itemContainer,
-              {width: 100 / items.length + '%'},
+              {
+                width: 100 / items.length + '%',
+                backgroundColor:
+                  active == index ? COLORS.DEFAULT_COLOR : undefined,
+              },
               index != items.length - 1
                 ? {borderRightWidth: 1, borderRightColor: COLORS.DEFAULT_COLOR}
                 : {},
+              active == 0 &&
+                active == index && {
+                  borderTopLeftRadius: 8,
+                  borderBottomLeftRadius: 8,
+                },
+              active == items.length - 1 &&
+                active == index && {
+                  borderTopRightRadius: 8,
+                  borderBottomRightRadius: 8,
+                },
             ]}>
-            <Text style={styles.text}>{el.text}</Text>
+            <Text
+              style={[
+                styles.text,
+                {color: active == index ? '#fff' : COLORS.textColor},
+              ]}>
+              {el.text}
+            </Text>
             <Icon name={el.icon} style={styles.icon} />
+            {el.image && <Image source={el.image} style={styles.image} />}
           </TouchableOpacity>
         );
       })}
@@ -41,16 +63,21 @@ const styles = StyleSheet.create({
   },
   itemContainer: {
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
   },
   text: {
     color: COLORS.textColor,
     fontFamily: FONTS.bold,
+    textAlign: 'center',
   },
   icon: {
     fontSize: 18,
     color: COLORS.DEFAULT_COLOR,
     marginHorizontal: 3,
+  },
+  image: {
+    height: 24,
+    width: 24,
   },
 });
