@@ -40,7 +40,13 @@ const Tab = (props: any) => {
               ]}>
               {el.text}
             </Text>
-            <Icon name={el.icon} style={styles.icon} />
+            <Icon
+              name={el.icon}
+              style={[
+                styles.icon,
+                {color: active == index ? '#fff' : COLORS.DEFAULT_COLOR},
+              ]}
+            />
             {el.image && <Image source={el.image} style={styles.image} />}
           </TouchableOpacity>
         );

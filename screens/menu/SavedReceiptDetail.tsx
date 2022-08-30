@@ -1,92 +1,41 @@
 import React, {useState} from 'react';
-import {
-  FlatList,
-  Image,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
-import Icon from 'react-native-vector-icons/FontAwesome5';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import CardCounterButtonItem from '../../components/CardCounterButtonItem';
-import CardItem from '../../components/CardItem';
-import CounterButton from '../../components/CounterButton';
+import {FlatList, ScrollView, StyleSheet, Text, View} from 'react-native';
+import CardItemList from '../../components/CardItemList';
 import Header from '../../components/Header';
+import HeaderImage from '../../components/HeaderImage';
 import Tab from '../../components/Tab';
 import {COLORS, FONTS} from '../../constants';
 import {
-  FoodData,
-  ProcessFoodMenuDetailTabs,
   ReceiptData,
+  SavedReceiptData,
+  SavedReceiptDetailTabs,
 } from '../../data/data';
-import {getHeight, getWidth, setWidth} from '../../utils/Dimension';
-import {showDialogMessage, showSuccessMessage} from '../../utils/helper';
+import {getHeight, getWidth} from '../../utils/Dimension';
+import {showSuccessMessage} from '../../utils/helper';
 
-const ProcessFoodMenuDetail = (props: any) => {
-  const [modalShow, setModalShow] = useState(true);
+const SavedReceiptDetail = (props: any) => {
+  const {item, title} = props.route.params;
   const [activeTab, setActiveTab] = useState();
-
-  const onDayPress = (day: any) => {
-    setModalShow(false);
-  };
 
   const onMainTabPress = (index: any) => {
     setActiveTab(index);
   };
 
-  const onSave = () => {
-    // showDialogMessage('Та үүсгэхдээ итгэлтэй байна уу?', () =>
-    showSuccessMessage('Амжилттай илгээгдлээ.');
-    // );
-  };
-  console.log('activeTab', activeTab);
   return (
     <ScrollView style={styles.container}>
-      <Header
-        leftIcon={'back'}
-        title={'Хоолны цэс боловсруулах'}
+      <HeaderImage
+        item={item}
+        title={title ? title : 'Миний хадгалсан цэс'}
         leftIconPress={props.navigation.goBack}
       />
       <View style={styles.wrapper}>
         <Tab
-          items={ProcessFoodMenuDetailTabs}
+          items={SavedReceiptDetailTabs}
           containerStyle={styles.secondTab}
           active={activeTab}
           onPress={onMainTabPress}
         />
 
-        <View style={styles.headerTextContainer}>
-          <View style={styles.headerInfoItem}>
-            <Icon name="burn" style={styles.icon} />
-            <Text style={styles.headerTextTitle}>60 ккал</Text>
-          </View>
-          <View style={styles.headerInfo2}>
-            <Text style={styles.icon}>₮</Text>
-            <Text style={styles.headerTextTitle}>3,500</Text>
-          </View>
-        </View>
-        <View
-          style={{
-            flexDirection: 'row',
-            marginTop: 12,
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}>
-          <View style={styles.childContainer}>
-            <Image
-              source={require('../../assets/images/child.png')}
-              style={styles.child}
-            />
-            <Text style={styles.childText}> Хүүхдийн тоо</Text>
-          </View>
-          <View style={{marginRight: setWidth(12)}}>
-            <CounterButton />
-          </View>
-        </View>
         {activeTab == 1 ? (
           <View>
             <View style={{flexDirection: 'row', marginTop: 10}}>
@@ -140,50 +89,19 @@ const ProcessFoodMenuDetail = (props: any) => {
           <View>
             <FlatList
               numColumns={3}
-              style={{marginTop: 30}}
-              data={ReceiptData}
-              keyExtractor={({item, index}: any) => index}
-              renderItem={({item}: any) => (
-                <CardCounterButtonItem
-                  item={item}
-                  iconColor={COLORS.DEFAULT_COLOR}
-                />
+              ItemSeparatorComponent={() => (
+                <View
+                  style={{
+                    height: 0.2,
+                    backgroundColor: COLORS.DEFAULT_COLOR,
+                    width: getWidth(),
+                  }}></View>
               )}
+              style={{marginTop: 30}}
+              data={SavedReceiptData}
+              keyExtractor={({item, index}: any) => index}
+              renderItem={({item}: any) => <CardItemList item={item} />}
             />
-
-            <View style={styles.createCard}>
-              <TouchableOpacity style={styles.addButtonContainer}>
-                <Icon name="plus" style={styles.addIcon} />
-              </TouchableOpacity>
-              <Text style={styles.createCardText}>Шаардах хуудас үүсгэх</Text>
-              <MaterialCommunityIcons
-                name="checkbox-multiple-marked-outline"
-                style={styles.createCardIcon}
-              />
-            </View>
-            <View style={styles.headerTextContainer}>
-              <View style={styles.headerInfoItem2}>
-                <Text style={styles.headerTextTitle2}>Тэмдэглэл</Text>
-              </View>
-            </View>
-
-            <LinearGradient
-              colors={['#F15A24', '#FFBD08']}
-              style={{marginTop: 20, borderRadius: 6}}>
-              <TextInput
-                style={styles.note}
-                placeholder="Энд тэмдэглэл бичнэ үү."
-              />
-            </LinearGradient>
-            <TouchableOpacity
-              style={[styles.createCard, {marginBottom: 20}]}
-              onPress={onSave}>
-              <Text style={styles.createCardText}>Тэмдэглэл бичих</Text>
-              <MaterialCommunityIcons
-                name="note-outline"
-                style={styles.createCardIcon}
-              />
-            </TouchableOpacity>
           </View>
         )}
       </View>
@@ -191,7 +109,7 @@ const ProcessFoodMenuDetail = (props: any) => {
   );
 };
 
-export default ProcessFoodMenuDetail;
+export default SavedReceiptDetail;
 
 const styles = StyleSheet.create({
   container: {

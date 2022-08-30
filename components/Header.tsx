@@ -12,7 +12,15 @@ import {COLORS, FONTS} from '../constants';
 import {setHeight} from '../utils/Dimension';
 
 const Header = (props: any) => {
-  const {title, leftIcon, rightIcon, leftIconPress, rightIconPress} = props;
+  const {
+    title,
+    titleStyle,
+    leftIcon,
+    rightIconShow,
+    rightIcon,
+    leftIconPress,
+    rightIconPress,
+  } = props;
   return (
     <ImageBackground
       resizeMode="cover"
@@ -33,15 +41,21 @@ const Header = (props: any) => {
         />
       </TouchableOpacity>
       <View style={styles.titleContainer}>
-        <Text style={styles.title}>{title}</Text>
+        <Text style={[styles.title, titleStyle]}>{title}</Text>
       </View>
-      <TouchableOpacity style={styles.rightContainer} onPress={rightIconPress}>
-        <MaterialIcons
-          name={rightIcon ? rightIcon : 'notifications-none'}
-          style={styles.rightIcon}
-        />
-        <View style={styles.dot} />
-      </TouchableOpacity>
+      {rightIconShow ? (
+        <TouchableOpacity
+          style={styles.rightContainer}
+          onPress={rightIconPress}>
+          <MaterialIcons
+            name={rightIcon ? rightIcon : 'notifications-none'}
+            style={styles.rightIcon}
+          />
+          <View style={styles.dot} />
+        </TouchableOpacity>
+      ) : (
+        <View style={styles.rightContainerEmpty} />
+      )}
     </ImageBackground>
   );
 };
@@ -63,9 +77,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 14,
+    marginTop: '5%',
   },
   titleContainer: {
-    width: '40%',
+    width: '60%',
   },
   leftIcon: {
     color: COLORS.DEFAULT_COLOR,
@@ -84,6 +99,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: '5%',
+  },
+  rightContainerEmpty: {
+    width: 30,
+    height: 32,
   },
   rightIcon: {
     color: COLORS.DEFAULT_COLOR,

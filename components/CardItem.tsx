@@ -7,7 +7,8 @@ import LinearGradient from 'react-native-linear-gradient';
 import MaskedView from '@react-native-community/masked-view';
 
 const CardItem = (props: any) => {
-  const {item, iconColor, onItemPress} = props;
+  const {item, iconColor, iconType, onItemPress} = props;
+  const iconName = iconType == 'right' ? 'chevron-right' : 'bookmark-outline';
   return (
     <TouchableOpacity style={styles.itemContainer} onPress={onItemPress}>
       <Image
@@ -23,14 +24,14 @@ const CardItem = (props: any) => {
           <Text style={styles.name}>{item.name}</Text>
         </View>
         {iconColor == COLORS.DEFAULT_COLOR ? (
-          <Icon name="chevron-right" style={styles.icon} />
+          <Icon name={iconName} style={styles.icon} />
         ) : (
           <MaskedView
             style={{flex: 1, flexDirection: 'row', height: 40}}
             maskElement={
               <View
                 style={{backgroundColor: 'transparent', alignSelf: 'flex-end'}}>
-                <Icon name="chevron-right" style={styles.icon} />
+                <Icon name={iconName} style={styles.icon} />
               </View>
             }>
             <LinearGradient colors={['#F15A24', '#FFBD08']} style={{flex: 1}} />

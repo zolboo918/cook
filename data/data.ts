@@ -51,6 +51,16 @@ export const ProcessFoodMenuDetailTabs = [
     text: 'Технологи ажиллагаа',
   },
 ];
+export const SavedReceiptDetailTabs = [
+  {
+    text: 'Орц',
+    icon: 'id-badge',
+  },
+  {
+    image: require('../assets/images/pot.png'),
+    text: 'Хийх дараалал',
+  },
+];
 
 export const HomeStatData = [
   {
@@ -210,5 +220,135 @@ export const ReceiptData = [
     image: require('../assets/images/nogoo.png'),
     name: 'Байцаа',
     unit: 'гр',
+  },
+];
+
+export const SavedReceiptData = [
+  {
+    image: require('../assets/images/nogoo.png'),
+    name: 'Үхрийн мах /ясгүй',
+    unit: '1,5 kг',
+  },
+  {
+    image: require('../assets/images/nogoo.png'),
+    name: 'Төмс',
+    unit: '0,3 kг',
+  },
+  {
+    image: require('../assets/images/nogoo.png'),
+    name: 'Байцаа',
+    unit: '0,4 kг',
+  },
+  {
+    image: require('../assets/images/nogoo.png'),
+    name: 'Үхрийн мах /ясгүй',
+    unit: '1,5 kг',
+  },
+  {
+    image: require('../assets/images/nogoo.png'),
+    name: 'Төмс',
+    unit: '0,3 kг',
+  },
+  {
+    image: require('../assets/images/nogoo.png'),
+    name: 'Байцаа',
+    unit: '0,4 kг',
+  },
+  {
+    image: require('../assets/images/nogoo.png'),
+    name: 'Үхрийн мах /ясгүй',
+    unit: '1,5 kг',
+  },
+  {
+    image: require('../assets/images/nogoo.png'),
+    name: 'Төмс',
+    unit: '0,3 kг',
+  },
+  {
+    image: require('../assets/images/nogoo.png'),
+    name: 'Байцаа',
+    unit: '0,4 kг',
+  },
+  {
+    image: require('../assets/images/nogoo.png'),
+    name: 'Үхрийн мах /ясгүй',
+    unit: '1,5 kг',
+  },
+  {
+    image: require('../assets/images/nogoo.png'),
+    name: 'Төмс',
+    unit: '0,3 kг',
+  },
+  {
+    image: require('../assets/images/nogoo.png'),
+    name: 'Байцаа',
+    unit: '0,4 kг',
+  },
+];
+
+export const SavedReceiptListData = [
+  {
+    picture: require('../assets/images/shul.png'),
+    type: 'Миний хадгалсан',
+    name: 'Зууш',
+  },
+  {
+    picture: require('../assets/images/huurga.png'),
+    type: 'Миний хадгалсан',
+    name: 'Цезарь салат',
+  },
+  {
+    picture: require('../assets/images/nogoo.png'),
+    type: 'Миний хадгалсан',
+    name: 'Паста',
+  },
+  {
+    picture: require('../assets/images/hartsai.png'),
+    type: 'Миний хадгалсан',
+    name: 'Яргай загас',
+  },
+  {
+    picture: require('../assets/images/shul.png'),
+    type: 'Миний хадгалсан',
+    name: 'Зууш',
+  },
+  {
+    picture: require('../assets/images/huurga.png'),
+    type: 'Миний хадгалсан',
+    name: 'Цезарь салат',
+  },
+];
+
+export const CategoryData = [
+  {
+    image: require('../assets/images/1rhool.png'),
+    name: '1-р хоол',
+  },
+  {
+    image: require('../assets/images/2rhool.png'),
+    name: '2-р хоол',
+  },
+  {
+    image: require('../assets/images/hachir.png'),
+    name: 'Хачир',
+  },
+  {
+    image: require('../assets/images/uuh.png'),
+    name: 'Уух зүйл',
+  },
+];
+
+export const ExampleSubMenuData = [
+  {
+    name: 'Будаатай шөл',
+  },
+  {
+    name: 'Ногоотой шөл',
+  },
+  {
+    name: 'Гурилтай шөл',
+  },
+  {
+    name: 'Пүнтүүзтэй шөл',
   },
 ];

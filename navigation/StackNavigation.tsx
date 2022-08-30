@@ -6,9 +6,11 @@ import {COLORS} from '../constants';
 import Home from '../screens/Home';
 import BottomNavigation from './BottomNavigation';
 import ProcessFoodMenuList from '../screens/menu/ProcessFoodMenuList';
-import SavedReceipt from '../screens/menu/SavedReceipt';
-import ExampleMenu from '../screens/menu/ExampleMenu';
+import SavedReceipt from '../screens/menu/SavedReceiptList';
+import ExampleMenu from '../screens/menu/ExampleMenuList';
 import ProcessFoodMenuDetail from '../screens/menu/ProcessFoodMenuDetail';
+import SavedReceiptDetail from '../screens/menu/SavedReceiptDetail';
+import ExampleSubMenu from '../screens/menu/ExampleSubMenu';
 
 const Stack = createNativeStackNavigator();
 
@@ -38,8 +40,18 @@ function StackNavigation() {
             options={{headerShown: false}}
           />
           <Stack.Screen
+            name="SavedReceiptDetail"
+            component={SavedReceiptDetail}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
             name="ExampleMenu"
             component={ExampleMenu}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="ExampleSubMenu"
+            component={ExampleSubMenu}
             options={{headerShown: false}}
           />
         </Stack.Navigator>
