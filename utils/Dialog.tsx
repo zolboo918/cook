@@ -36,7 +36,7 @@ const Dialog = (props: any) => {
             onPress={() => {
               CustomAlert.hide();
             }}>
-            <Text style={styles.textStyle}>Үгүй</Text>
+            <Text style={styles.textStyle2}>Үгүй</Text>
           </TouchableOpacity>
         </View>
       </View>

@@ -76,6 +76,7 @@ const ProcessFoodMenuList = (props: any) => {
           renderItem={({item}: any) => (
             <CardItem
               item={item}
+              iconType="right"
               iconColor={COLORS.DEFAULT_COLOR}
               onItemPress={onItemPress}
             />
@@ -169,7 +170,6 @@ const styles = StyleSheet.create({
   headerTextContainer: {
     flexDirection: 'row',
     marginTop: 20,
-    paddingVertical: 10,
   },
   headerTextTitle: {
     color: COLORS.textColor,

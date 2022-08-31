@@ -50,7 +50,9 @@ const Home = () => {
           style={{marginTop: 30}}
           data={FoodData}
           keyExtractor={({item, index}: any) => index}
-          renderItem={({item}: any) => <CardItem item={item} />}
+          renderItem={({item}: any) => (
+            <CardItem item={item} iconType={'right'} />
+          )}
         />
       </View>
     </ScrollView>

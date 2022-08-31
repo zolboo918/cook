@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   },
 
   searchInput: {
-    borderWidth: 0.2,
+    borderWidth: 0.5,
     borderColor: COLORS.DEFAULT_COLOR,
     backgroundColor: '#858C9410',
     padding: 10,

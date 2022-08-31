@@ -21,9 +21,9 @@ export default CardCounterButtonItem;
 const styles = StyleSheet.create({
   container: {
     height: 150,
-    width: '31%',
-    marginRight: 10,
-    borderWidth: 0.2,
+    width: '32%',
+    marginRight: 5,
+    borderWidth: 0.4,
     borderColor: '#858C94',
     borderRadius: 6,
     marginBottom: 10,

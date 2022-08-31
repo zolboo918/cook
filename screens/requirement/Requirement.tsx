@@ -24,12 +24,12 @@ const Requirement = (props: any) => {
       />
       <View style={styles.wrapper}>
         <MenuListItem
-          icon={'book'}
+          rightIcon={'book'}
           name={'Шаардах хуудас үүсгэх'}
           onPress={press1}
         />
         <MenuListItem
-          icon={'pushpino'}
+          rightIcon={'pushpino'}
           name={'Миний үүсгэсэн шаардах хуудас'}
           onPress={press2}
         />

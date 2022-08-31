@@ -27,7 +27,8 @@ export const styles = StyleSheet.create({
     alignSelf: 'flex-end',
   },
   button2: {
-    borderRadius: 4,
+    borderTopLeftRadius: 4,
+    borderBottomLeftRadius: 4,
     width: '40%',
     height: 42,
     justifyContent: 'center',
@@ -36,7 +37,8 @@ export const styles = StyleSheet.create({
     marginBottom: 30,
   },
   button3: {
-    borderRadius: 4,
+    borderTopRightRadius: 4,
+    borderBottomRightRadius: 4,
     width: '40%',
     height: 42,
     justifyContent: 'center',
@@ -47,6 +49,12 @@ export const styles = StyleSheet.create({
     marginBottom: 30,
   },
   textStyle: {
+    color: '#fff',
+    fontWeight: 'bold',
+    textAlign: 'center',
+    fontSize: 17,
+  },
+  textStyle2: {
     color: COLORS.textColor,
     fontWeight: 'bold',
     textAlign: 'center',

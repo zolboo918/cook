@@ -24,6 +24,9 @@ const StateListItem = (props: any) => {
     case 'Илгээсэн':
       iconName = 'information-outline';
       break;
+    case 'Хянасан':
+      iconName = 'checkbox-marked-circle-outline';
+      break;
     default:
       break;
   }
@@ -41,6 +44,9 @@ const StateListItem = (props: any) => {
     case 'Илгээсэн':
       color = '#29B6F6';
       break;
+    case 'Хянасан':
+      color = '#66BB6A';
+      break;
     default:
       break;
   }
@@ -53,7 +59,7 @@ const StateListItem = (props: any) => {
 
       <TouchableOpacity
         style={{
-          width: '50%',
+          width: '45%',
           alignItems: 'center',
           height: 40,
           backgroundColor: color,
@@ -75,7 +81,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     width: '100%',
-    height: 116,
+    height: 64,
     borderBottomWidth: 0.5,
     borderColor: COLORS.DEFAULT_COLOR,
     // marginBottom: 10,
@@ -99,6 +105,6 @@ const styles = StyleSheet.create({
   rest: {
     fontSize: 15,
     color: '#fff',
-    marginLeft: 25,
+    marginLeft: 18,
   },
 });

@@ -168,7 +168,7 @@ const ProcessFoodMenuDetail = (props: any) => {
             </View>
 
             <LinearGradient
-              colors={['#F15A24', '#FFBD08']}
+              colors={['#F15A2450', '#FFBD0850']}
               style={{marginTop: 20, borderRadius: 6}}>
               <TextInput
                 style={styles.note}
@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginTop: 20,
     // paddingVertical: 10,
-    height: 40,
+    height: 60,
     borderTopWidth: 0.7,
     borderBottomWidth: 0.7,
     borderColor: COLORS.DEFAULT_COLOR,
@@ -225,7 +225,7 @@ const styles = StyleSheet.create({
     marginLeft: 20,
   },
   headerTextTitle2: {
-    color: COLORS.textColor,
+    color: COLORS.textColor + '70',
     fontFamily: FONTS.regular,
     fontSize: 15,
   },
@@ -281,7 +281,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 6,
     borderColor: COLORS.DEFAULT_COLOR,
-    height: 70,
+    height: 41,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     alignItems: 'center',

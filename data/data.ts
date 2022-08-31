@@ -7,11 +7,11 @@ export const HomeTab = [
   },
   {
     text: 'Дээж бүртгэл',
-    icon: 'file-plus',
+    icon: 'file-medical',
   },
   {
     text: 'ХААБ',
-    icon: 'shield-plus-outline',
+    icon: 'shield-alt',
   },
 ];
 export const ProcessFoogMenuMainTabs = [
@@ -414,5 +414,59 @@ export const StateListData = [
   {
     id: '#2021010501',
     state: 'Илгээсэн',
+  },
+];
+
+export const HealthFoodData = [
+  {
+    id: 'Бага анги',
+    state: 'Хүлээгдэж буй',
+  },
+  {
+    id: 'Дунд анги',
+    state: 'Хянасан',
+  },
+  {
+    id: 'Ахлах анги',
+    state: 'Хүлээгдэж буй',
+  },
+  {
+    id: 'Бусад',
+    state: 'Хянасан',
+  },
+];
+
+export const ReceiveHealthFoodData = [
+  {
+    image: require('../assets/images/1rhool.png'),
+    name: 'Үхрийн мах /ясгүй',
+    unit: '10 кг',
+    endDate: '2022.06.01',
+    normal: false,
+    notNormal: false,
+  },
+  {
+    image: require('../assets/images/1rhool.png'),
+    name: 'Төмс ',
+    unit: '5 кг',
+    endDate: '2022.06.01',
+    normal: false,
+    notNormal: false,
+  },
+  {
+    image: require('../assets/images/1rhool.png'),
+    name: 'Байцаа',
+    unit: '10 кг',
+    endDate: '2022.06.01',
+    normal: false,
+    notNormal: false,
+  },
+  {
+    image: require('../assets/images/1rhool.png'),
+    name: 'Чинжүү',
+    unit: '2 кг',
+    endDate: '2022.06.01',
+    normal: false,
+    notNormal: false,
   },
 ];

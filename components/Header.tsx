@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     marginTop: '5%',
   },
   titleContainer: {
-    width: '60%',
+    width: '70%',
   },
   leftIcon: {
     color: COLORS.DEFAULT_COLOR,

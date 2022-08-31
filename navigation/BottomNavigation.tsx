@@ -6,7 +6,7 @@ import Home from '../screens/Home';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Menu from '../screens/menu/Menu';
 import Requirement from '../screens/requirement/Requirement';
-import Health from '../screens/Health';
+import Health from '../screens/health/Health';
 import {COLORS} from '../constants';
 
 const Tab = createMaterialBottomTabNavigator();

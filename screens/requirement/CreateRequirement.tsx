@@ -22,7 +22,8 @@ import {CustomAlert} from '../../utils/CustomAlert';
 
 const CreateRequirement = (props: any) => {
   const [activeTab, setActiveTab] = useState(0);
-  const {item, title} = props.route.params;
+  const item = props.route.params?.item;
+  const title = props.route.params?.title;
   const onMainTabPress = (index: any) => {
     setActiveTab(index);
   };
@@ -45,9 +46,17 @@ const CreateRequirement = (props: any) => {
           <View style={styles.stateContainer}>
             <Text style={styles.stateLabel}>Төлөв</Text>
             <TouchableOpacity
-              style={[styles.state, {backgroundColor: item.color}]}>
-              <Icon name={item.iconName} style={styles.icon} />
-              <Text style={styles.rest}>{item.state}</Text>
+              style={[
+                styles.state,
+                {borderWidth: 1, borderColor: item?.color},
+              ]}>
+              <Icon
+                name={item?.iconName}
+                style={[styles.icon, {color: item?.color}]}
+              />
+              <Text style={[styles.rest, {color: item?.color}]}>
+                {item?.state}
+              </Text>
             </TouchableOpacity>
           </View>
         ) : (
@@ -106,7 +115,7 @@ const CreateRequirement = (props: any) => {
       />
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Илгээх</Text>
-        <Icon name="send-outline" style={styles.buttonIcon} />
+        <Icon name="send-outline" style={styles.buttonIcon2} />
       </TouchableOpacity>
     </ScrollView>
   );
@@ -180,6 +189,12 @@ const styles = StyleSheet.create({
   buttonIcon: {
     color: '#fff',
     fontSize: 26,
+    marginLeft: 12,
+  },
+  buttonIcon2: {
+    color: COLORS.DEFAULT_COLOR,
+    fontSize: 26,
+    marginLeft: 12,
   },
   rowBack: {
     alignItems: 'center',
