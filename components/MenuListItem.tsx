@@ -5,14 +5,20 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const MenuListItem = (props: any) => {
-  const {icon, name, onPress} = props;
+  const {leftIcon, rightIcon, name, onPress} = props;
 
   return (
     <View>
       <TouchableOpacity style={styles.itemContainer} onPress={onPress}>
-        <Icon name={icon} style={styles.leftIcon} />
-        <Text style={styles.name}>{name}</Text>
-        <AntDesign name={'arrowright'} style={styles.rightIcon} />
+        {leftIcon && <Icon name={leftIcon} style={styles.leftIcon} />}
+        <Text style={[styles.name, {width: leftIcon ? '85%' : '92.5%'}]}>
+          {name}
+        </Text>
+
+        <AntDesign
+          name={rightIcon ? rightIcon : 'arrowright'}
+          style={styles.rightIcon}
+        />
       </TouchableOpacity>
     </View>
   );
@@ -37,18 +43,18 @@ const styles = StyleSheet.create({
   leftIcon: {
     fontSize: 20,
     color: COLORS.DEFAULT_COLOR,
-    width: '10%',
+    width: '7.5%',
   },
   name: {
     fontSize: 15,
     fontFamily: FONTS.bold,
     color: COLORS.textColor,
-    width: '80%',
+    width: '85%',
   },
   rightIcon: {
     fontSize: 20,
     color: COLORS.DEFAULT_COLOR,
-    width: '10%',
+    width: '7.5%',
     textAlign: 'right',
   },
 });

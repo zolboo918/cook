@@ -43,7 +43,7 @@ const ProcessFoodMenuDetail = (props: any) => {
     showSuccessMessage('Амжилттай илгээгдлээ.');
     // );
   };
-  console.log('activeTab', activeTab);
+
   return (
     <ScrollView style={styles.container}>
       <Header

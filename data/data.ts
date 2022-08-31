@@ -352,3 +352,67 @@ export const ExampleSubMenuData = [
     name: 'Пүнтүүзтэй шөл',
   },
 ];
+
+export const CreateRequireMentData = [
+  {
+    name: 'Үхрийн мах /ясгүй',
+    image: require('../assets/images/1rhool.png'),
+    qty: '0',
+    rest: '30кг',
+  },
+  {
+    name: 'Төмс',
+    image: require('../assets/images/2rhool.png'),
+    qty: '1',
+    rest: '40 кг',
+  },
+  {
+    image: require('../assets/images/2rhool.png'),
+    name: 'Байцаа',
+    qty: '1',
+    rest: '20 кг',
+  },
+  {
+    image: require('../assets/images/shul.png'),
+    name: 'Гурил / 1-р',
+    qty: '10',
+    rest: '35 кг',
+  },
+  {
+    image: require('../assets/images/pot.png'),
+    name: 'Чинжүү',
+    qty: '10',
+    rest: '18 кг',
+  },
+];
+
+export const StateListData = [
+  {
+    id: '#2021010501',
+    state: 'Хүлээгдэж буй',
+  },
+  {
+    id: '#2021010501',
+    state: 'Татгалзсан',
+  },
+  {
+    id: '#2021010501',
+    state: 'Биелсэн',
+  },
+  {
+    id: '#2021010501',
+    state: 'Биелсэн',
+  },
+  {
+    id: '#2021010501',
+    state: 'Илгээсэн',
+  },
+  {
+    id: '#2021010501',
+    state: 'Хүлээгдэж буй',
+  },
+  {
+    id: '#2021010501',
+    state: 'Илгээсэн',
+  },
+];

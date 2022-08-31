@@ -11,6 +11,8 @@ import ExampleMenu from '../screens/menu/ExampleMenuList';
 import ProcessFoodMenuDetail from '../screens/menu/ProcessFoodMenuDetail';
 import SavedReceiptDetail from '../screens/menu/SavedReceiptDetail';
 import ExampleSubMenu from '../screens/menu/ExampleSubMenu';
+import CreateRequirement from '../screens/requirement/CreateRequirement';
+import MyRequirement from '../screens/requirement/MyRequirement';
 
 const Stack = createNativeStackNavigator();
 
@@ -52,6 +54,16 @@ function StackNavigation() {
           <Stack.Screen
             name="ExampleSubMenu"
             component={ExampleSubMenu}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="CreateRequirement"
+            component={CreateRequirement}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="MyRequirement"
+            component={MyRequirement}
             options={{headerShown: false}}
           />
         </Stack.Navigator>

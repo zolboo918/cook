@@ -6,37 +6,39 @@ import {getHeight} from '../../utils/Dimension';
 import {MenuListData} from '../../data/data';
 import MenuListItem from '../../components/MenuListItem';
 
-const Menu = (props: any) => {
+const Requirement = (props: any) => {
   const press1 = () => {
-    props.navigation.navigate('ProcessFoodMenu');
+    props.navigation.navigate('CreateRequirement');
   };
   const press2 = () => {
-    props.navigation.navigate('SavedReceipt');
-  };
-  const press3 = () => {
-    props.navigation.navigate('ExampleMenu');
+    props.navigation.navigate('MyRequirement');
   };
   return (
     <View style={styles.container}>
-      <Header title={'Хоолны цэс боловсруулах'} />
+      <Header
+        leftIcon={'menu'}
+        title={'Шаардах хуудас'}
+        rightIconShow={true}
+        titleStyle={{fontWeight: 'bold', fontSize: 24, marginTop: '5%'}}
+        leftIconPress={props.navigation.goBack}
+      />
       <View style={styles.wrapper}>
         <MenuListItem
-          leftIcon={'book'}
-          name={'Хоолны цэс боловсруулах'}
+          icon={'book'}
+          name={'Шаардах хуудас үүсгэх'}
           onPress={press1}
         />
         <MenuListItem
-          leftIcon={'pushpino'}
-          name={'Миний хадгалсан жор'}
+          icon={'pushpino'}
+          name={'Миний үүсгэсэн шаардах хуудас'}
           onPress={press2}
         />
-        <MenuListItem leftIcon={'copy1'} name={'Жишиг цэс'} onPress={press3} />
       </View>
     </View>
   );
 };
 
-export default Menu;
+export default Requirement;
 
 const styles = StyleSheet.create({
   container: {

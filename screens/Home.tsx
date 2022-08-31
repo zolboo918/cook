@@ -16,7 +16,11 @@ const Home = () => {
 
   return (
     <ScrollView style={styles.container}>
-      <Header title={'Сайн байна уу?'} />
+      <Header
+        title={'Сайн байна уу?'}
+        titleStyle={{fontSize: 24, marginTop: '5%'}}
+        rightIconShow={true}
+      />
       <View style={styles.wrapper}>
         <Tab items={HomeTab} />
       </View>
