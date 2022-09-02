@@ -23,7 +23,7 @@ import {
   ProcessFoodMenuDetailTabs,
   ReceiptData,
 } from '../../data/data';
-import {getHeight, getWidth, setWidth} from '../../utils/Dimension';
+import {getHeight, getWidth, setHeight, setWidth} from '../../utils/Dimension';
 import {showDialogMessage, showSuccessMessage} from '../../utils/helper';
 
 const ProcessFoodMenuDetail = (props: any) => {
@@ -220,13 +220,13 @@ const styles = StyleSheet.create({
   },
   headerTextTitle: {
     color: COLORS.textColor,
-    fontFamily: FONTS.regular,
+    fontFamily: FONTS.mulishRegular,
     fontSize: 15,
     marginLeft: 20,
   },
   headerTextTitle2: {
     color: COLORS.textColor + '70',
-    fontFamily: FONTS.regular,
+    fontFamily: FONTS.mulishRegular,
     fontSize: 15,
   },
   headerText: {
@@ -274,14 +274,14 @@ const styles = StyleSheet.create({
   childText: {
     fontSize: 15,
     color: COLORS.textColor,
-    fontFamily: FONTS.regular,
+    fontFamily: FONTS.mulishRegular,
   },
   createCard: {
     width: '100%',
     borderWidth: 1,
     borderRadius: 6,
     borderColor: COLORS.DEFAULT_COLOR,
-    height: 41,
+    height: setHeight(9),
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     alignItems: 'center',
@@ -289,13 +289,13 @@ const styles = StyleSheet.create({
   },
   createCardText: {
     color: COLORS.textColor,
-    fontSize: 24,
-    fontFamily: FONTS.regular,
+    fontSize: 26,
+    fontFamily: FONTS.mulishRegular,
     width: '70%',
     textAlign: 'center',
   },
   createCardIcon: {
-    fontSize: 20,
+    fontSize: 28,
     color: COLORS.DEFAULT_COLOR,
   },
   addButtonContainer: {
@@ -328,6 +328,7 @@ const styles = StyleSheet.create({
     height: 100,
     padding: 10,
     borderRadius: 6,
+    fontFamily: FONTS.mulishRegular,
     textAlignVertical: 'top',
   },
   foodName: {

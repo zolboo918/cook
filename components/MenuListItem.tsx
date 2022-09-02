@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: 15,
-    fontFamily: FONTS.bold,
+    fontFamily: FONTS.mulishSemiBold,
     color: COLORS.textColor,
     width: '85%',
   },

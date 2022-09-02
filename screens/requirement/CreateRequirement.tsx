@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
   childText: {
     fontSize: 15,
     color: COLORS.textColor,
-    fontFamily: FONTS.regular,
+    fontFamily: FONTS.mulishRegular,
   },
   listHeaderContainer: {
     flexDirection: 'row',

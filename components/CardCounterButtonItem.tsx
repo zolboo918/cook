@@ -2,6 +2,7 @@ import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {COLORS, FONTS} from '../constants';
 import CounterButton from './CounterButton';
+import {setHeight, setWidth} from '../utils/Dimension';
 
 const CardCounterButtonItem = (props: any) => {
   const {item} = props;
@@ -20,7 +21,7 @@ export default CardCounterButtonItem;
 
 const styles = StyleSheet.create({
   container: {
-    height: 150,
+    height: setHeight(20),
     width: '32%',
     marginRight: 5,
     borderWidth: 0.4,
@@ -29,17 +30,20 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   image: {
-    height: 56,
+    height: 80,
+    width: setWidth(25),
     alignSelf: 'center',
+    // marginTop: 10,
   },
   name: {
     fontSize: 15,
     color: COLORS.textColor,
     textAlign: 'center',
-    fontFamily: FONTS.regular,
+    fontFamily: FONTS.mulishRegular,
     height: 40,
   },
   buttonContainer: {
     alignSelf: 'center',
+    marginTop: -10,
   },
 });

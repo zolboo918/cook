@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
   },
   itemText: {
     fontSize: 15,
-    fontFamily: FONTS.regular,
+    fontFamily: FONTS.mulishRegular,
     color: COLORS.textColor,
   },
 });

@@ -4,7 +4,7 @@ import {COLORS, FONTS} from '../constants';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const Tab = (props: any) => {
-  const {items, containerStyle, active, onPress} = props;
+  const {items, containerStyle, active, textStyle, onPress} = props;
   return (
     <View style={[styles.container, containerStyle]}>
       {items.map((el: any, index: any) => {
@@ -33,13 +33,16 @@ const Tab = (props: any) => {
                   borderBottomRightRadius: 8,
                 },
             ]}>
-            <Text
-              style={[
-                styles.text,
-                {color: active == index ? '#fff' : COLORS.textColor},
-              ]}>
-              {el.text}
-            </Text>
+            <View style={{}}>
+              <Text
+                style={[
+                  styles.text,
+                  {color: active == index ? '#fff' : COLORS.textColor},
+                  textStyle,
+                ]}>
+                {el.text}
+              </Text>
+            </View>
             <Icon
               name={el.icon}
               style={[
@@ -74,8 +77,9 @@ const styles = StyleSheet.create({
   },
   text: {
     color: COLORS.textColor,
-    fontFamily: FONTS.bold,
+    fontFamily: FONTS.mulishSemiBold,
     textAlign: 'center',
+    fontSize: 13,
   },
   icon: {
     fontSize: 18,

@@ -78,13 +78,13 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     fontSize: 11,
     color: '#858C94',
-    fontFamily: FONTS.regular,
+    fontFamily: FONTS.mulishLight,
   },
   name: {
     marginLeft: 10,
     fontSize: 15,
     color: COLORS.textColor,
-    fontFamily: FONTS.regular,
+    fontFamily: FONTS.mulishRegular,
   },
   icon: {
     marginTop: 8,

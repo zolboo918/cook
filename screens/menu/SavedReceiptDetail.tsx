@@ -100,7 +100,9 @@ const SavedReceiptDetail = (props: any) => {
               style={{marginTop: 30}}
               data={SavedReceiptData}
               keyExtractor={({item, index}: any) => index}
-              renderItem={({item}: any) => <CardItemList item={item} />}
+              renderItem={({item, index}: any) => (
+                <CardItemList item={item} index={index} />
+              )}
             />
           </View>
         )}
@@ -255,7 +257,7 @@ const styles = StyleSheet.create({
   },
   textValue: {
     fontSize: 15,
-    fontFamily: FONTS.regular,
+    fontFamily: FONTS.mulishRegular,
     color: COLORS.textColor,
   },
 });

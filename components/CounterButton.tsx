@@ -6,8 +6,9 @@ import {
   View,
 } from 'react-native';
 import React, {useState} from 'react';
-import {COLORS} from '../constants';
+import {COLORS, FONTS} from '../constants';
 import LinearGradient from 'react-native-linear-gradient';
+import Icon from 'react-native-vector-icons/Feather';
 
 const CounterButton = (props: any) => {
   const {onAddPress, onRemovePress, unit} = props;
@@ -20,7 +21,7 @@ const CounterButton = (props: any) => {
             if (count > 0) setCount(count - 1);
             if (onRemovePress) onRemovePress();
           }}>
-          <Text style={styles.buttonText}>-</Text>
+          <Icon name="minus" style={styles.buttonTextMinus} />
         </TouchableOpacity>
       </LinearGradient>
       <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -30,7 +31,10 @@ const CounterButton = (props: any) => {
           <TextInput
             // defaultValue={0}
             value={count.toString()}
-            style={styles.value}
+            style={[
+              styles.value,
+              {fontSize: count > 999 ? 18 : count > 99 ? 22 : 24},
+            ]}
             keyboardType="number-pad"
             onChangeText={val => setCount(Number(val))}
           />
@@ -65,6 +69,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 6,
   },
+  buttonTextMinus: {
+    color: '#fff',
+    fontSize: 20,
+    lineHeight: 20,
+    marginTop: 2,
+  },
   buttonText: {
     color: '#fff',
     fontSize: 24,
@@ -76,10 +86,11 @@ const styles = StyleSheet.create({
     fontSize: 24,
     alignItems: 'center',
     textAlign: 'center',
+    fontFamily: FONTS.mulishSemiBold,
   },
   unit: {
-    color: COLORS.DEFAULT_COLOR,
-    marginTop: 5,
+    color: COLORS.textColor,
+    // marginTop: 5,
     marginRight: 5,
   },
 });

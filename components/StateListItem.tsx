@@ -104,6 +104,7 @@ const styles = StyleSheet.create({
   },
   rest: {
     fontSize: 15,
+    fontFamily: FONTS.mulishRegular,
     color: '#fff',
     marginLeft: 18,
   },

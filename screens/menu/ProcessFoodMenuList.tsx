@@ -54,12 +54,14 @@ const ProcessFoodMenuList = (props: any) => {
           items={ProcessFoogMenuMainTabs}
           containerStyle={styles.mainTab}
           active={activeTab}
+          textStyle={{fontFamily: FONTS.mulishSemiBold}}
           onPress={onMainTabPress}
         />
         <Tab
           items={ProcessFoogMenuSecondTabs}
           containerStyle={styles.secondTab}
           active={secondActiveTab}
+          textStyle={{fontFamily: FONTS.mulishSemiBold, fontSize: 15}}
           onPress={onSecondTabPress}
         />
         <View style={styles.headerTextContainer}>
@@ -153,6 +155,7 @@ const styles = StyleSheet.create({
   clearButtonText: {
     color: '#858C94',
     fontWeight: 'bold',
+    fontFamily: FONTS.mulishBlack,
   },
   chooseButton: {
     height: 34,
@@ -166,6 +169,7 @@ const styles = StyleSheet.create({
   chooseButtonText: {
     color: COLORS.textColor,
     fontWeight: 'bold',
+    fontFamily: FONTS.mulishBlack,
   },
   headerTextContainer: {
     flexDirection: 'row',
@@ -173,10 +177,10 @@ const styles = StyleSheet.create({
   },
   headerTextTitle: {
     color: COLORS.textColor,
-    fontFamily: FONTS.bold,
+    fontFamily: FONTS.mulishSemiBold,
   },
   headerText: {
     color: COLORS.textColor,
-    fontFamily: FONTS.regular,
+    fontFamily: FONTS.mulishRegular,
   },
 });

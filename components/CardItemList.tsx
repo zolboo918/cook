@@ -3,9 +3,9 @@ import React from 'react';
 import {COLORS, FONTS} from '../constants';
 
 const CardItemList = (props: any) => {
-  const {item} = props;
+  const {item, index} = props;
   return (
-    <View style={styles.container}>
+    <View style={[styles.container]}>
       <Image source={item.image} style={styles.image} resizeMode="contain" />
       <Text style={styles.name}>{item.name}</Text>
       <Text style={styles.unit}>{item.unit}</Text>
@@ -19,6 +19,9 @@ const styles = StyleSheet.create({
   container: {
     width: '31%',
     paddingTop: 20,
+    borderTopWidth: 0.5,
+    borderBottomWidth: 0.5,
+    borderColor: COLORS.DEFAULT_COLOR,
   },
   image: {
     height: 56,

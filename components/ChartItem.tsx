@@ -93,6 +93,7 @@ const styles = StyleSheet.create({
   statUnit: {
     color: '#17260050',
     fontSize: 12,
+    fontFamily: FONTS.regular,
     lineHeight: 12,
   },
   statTextContainer: {

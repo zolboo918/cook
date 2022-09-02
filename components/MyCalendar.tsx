@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import {Calendar} from 'react-native-calendars';
-import {COLORS} from '../constants';
+import {COLORS, FONTS} from '../constants';
 
 const MyCalendar = (props: any) => {
   const {onDayPress} = props;
@@ -10,12 +10,14 @@ const MyCalendar = (props: any) => {
 
   const initialDate = `${date.getFullYear()}-${
     date.getMonth() + 1 > 10 ? date.getMonth() + 1 : '0' + (date.getMonth() + 1)
-  }-${date.getDate()}`;
+  }-${date.getDate() < 10 ? '0' + date.getDate() : date.getDate()}`;
+
   return (
     <View>
       <Calendar
         customHeaderTitle={
-          <Text style={{color: COLORS.textColor}}>
+          <Text
+            style={{color: COLORS.textColor, fontFamily: FONTS.mulishBlack}}>
             {date.getFullYear()} оны {month} сар
           </Text>
         }

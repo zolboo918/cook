@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
   },
   itemText: {
     fontSize: 15,
-    fontFamily: FONTS.bold,
+    fontFamily: FONTS.mulishSemiBold,
     color: COLORS.textColor,
   },
   itemIcon: {

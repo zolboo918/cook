@@ -22,7 +22,7 @@ const Home = () => {
         rightIconShow={true}
       />
       <View style={styles.wrapper}>
-        <Tab items={HomeTab} />
+        <Tab items={HomeTab} textStyle={{fontFamily: FONTS.bold}} />
       </View>
       <View style={styles.headerTextContainer}>
         <Text style={styles.headerTextTitle}>
@@ -81,11 +81,11 @@ const styles = StyleSheet.create({
   },
   headerTextTitle: {
     color: COLORS.textColor,
-    fontFamily: FONTS.bold,
+    fontFamily: FONTS.mulishSemiBold,
   },
   headerText: {
     color: COLORS.textColor,
-    fontFamily: FONTS.regular,
+    fontFamily: FONTS.mulishRegular,
   },
   statsContainer: {
     marginTop: 37,
@@ -93,12 +93,12 @@ const styles = StyleSheet.create({
   },
   statTitle: {
     color: COLORS.textColor,
-    fontFamily: FONTS.bold,
+    fontFamily: FONTS.mulishSemiBold,
     fontSize: 18,
   },
   statTitle2: {
     color: COLORS.textColor,
-    fontFamily: FONTS.regular,
+    fontFamily: FONTS.mulishLight,
     fontSize: 18,
   },
 });
