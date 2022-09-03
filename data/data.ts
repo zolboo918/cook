@@ -28,6 +28,16 @@ export const ProcessFoogMenuMainTabs = [
     text: 'Бусад',
   },
 ];
+export const RegisterTab = [
+  {
+    text: 'Хоолны дээж',
+    icon: 'file-alt',
+  },
+  {
+    text: 'Хоолны хэм',
+    icon: 'thermometer-three-quarters',
+  },
+];
 
 export const ProcessFoogMenuSecondTabs = [
   {
@@ -383,6 +393,13 @@ export const CreateRequireMentData = [
     name: 'Чинжүү',
     qty: '10',
     rest: '18 кг',
+  },
+];
+export const RegisterFoodData = [
+  {
+    name: 'Тухайн өдрийн хоолны цэснээс автоматаар татагдана.',
+    qty: '30',
+    unit: '°C',
   },
 ];
 

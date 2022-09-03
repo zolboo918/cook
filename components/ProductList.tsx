@@ -8,12 +8,18 @@ import MaskedView from '@react-native-community/masked-view';
 import CounterButton from './CounterButton';
 
 const ProductList = (props: any) => {
-  const {item, iconColor, iconType, onItemPress} = props;
+  const {item, iconColor, iconType, colStyle, containerStyle, onItemPress} =
+    props;
   const iconName = iconType == 'right' ? 'chevron-right' : 'bookmark-outline';
   return (
-    <TouchableOpacity style={styles.itemContainer} onPress={onItemPress}>
+    <TouchableOpacity
+      style={[styles.itemContainer, containerStyle]}
+      onPress={onItemPress}>
       <View
-        style={{justifyContent: 'center', alignItems: 'center', width: '33%'}}>
+        style={[
+          {justifyContent: 'center', alignItems: 'center', width: '33%'},
+          colStyle,
+        ]}>
         <Image
           source={item.image}
           style={styles.image}
@@ -23,10 +29,10 @@ const ProductList = (props: any) => {
         />
         <Text style={styles.name}>{item.name}</Text>
       </View>
-      <View style={{width: '33%', alignItems: 'center'}}>
-        <CounterButton value={item.qty} />
+      <View style={[styles.col, colStyle]}>
+        <CounterButton value={item.qty} unit={item.unit} />
       </View>
-      <View style={{width: '33%', alignItems: 'center'}}>
+      <View style={[styles.col, colStyle]}>
         <Text style={styles.rest}>{item.rest}</Text>
       </View>
     </TouchableOpacity>
@@ -60,5 +66,9 @@ const styles = StyleSheet.create({
   rest: {
     fontSize: 24,
     color: COLORS.textColor + '80',
+  },
+  col: {
+    width: '33%',
+    alignItems: 'center',
   },
 });

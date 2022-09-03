@@ -15,6 +15,7 @@ import CreateRequirement from '../screens/requirement/CreateRequirement';
 import MyRequirement from '../screens/requirement/MyRequirement';
 import Health1 from '../screens/health/Health1';
 import ReceiveFoodMaterial from '../screens/health/ReceiveFoodMaterial';
+import Register from '../screens/Register';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,7 +23,12 @@ function StackNavigation() {
   return (
     <View style={styles.container}>
       <SafeAreaView style={{flex: 1}}>
-        <Stack.Navigator initialRouteName="Login">
+        <Stack.Navigator initialRouteName="BottomNavigation">
+          <Stack.Screen
+            name="Register"
+            component={Register}
+            options={{headerShown: false}}
+          />
           <Stack.Screen
             name="BottomNavigation"
             component={BottomNavigation}
