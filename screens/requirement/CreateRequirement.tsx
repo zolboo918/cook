@@ -79,10 +79,10 @@ const CreateRequirement = (props: any) => {
               source={require('../../assets/images/child.png')}
               style={styles.child}
             />
-            <Text style={styles.childText}> Хүүхдийн тоо</Text>
+            <Text style={styles.childText}>Хүүхдийн тоо</Text>
           </View>
           <View style={{marginRight: setWidth(12)}}>
-            <CounterButton />
+            <CounterButton value={10} />
           </View>
         </View>
       </View>
@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: COLORS.DEFAULT_COLOR,
     borderRadius: 6,
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
     width: '55%',
   },
@@ -233,6 +233,8 @@ const styles = StyleSheet.create({
   },
   stateLabel: {
     fontSize: 13,
+    fontFamily: FONTS.mulishRegular,
     color: COLORS.textColor + '80',
+    marginLeft: 30,
   },
 });

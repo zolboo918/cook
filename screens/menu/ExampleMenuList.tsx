@@ -80,6 +80,7 @@ const styles = StyleSheet.create({
     borderColor: COLORS.DEFAULT_COLOR,
     backgroundColor: '#858C9410',
     padding: 10,
+    height: 40,
     fontFamily: FONTS.regular,
     borderRadius: 6,
   },
@@ -99,6 +100,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 15,
+    fontFamily: FONTS.mulishSemiBold,
     color: COLORS.textColor,
     marginTop: 10,
   },

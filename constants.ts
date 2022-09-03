@@ -12,4 +12,17 @@ export const FONTS = {
   mulishLight: 'Mulish-Light',
   mulishRegular: 'Mulish-Regular',
   mulishSemiBold: 'Mulish-SemiBold',
+  mulishBold: 'Mulish-Bold',
+};
+
+export const shadowStyle = {
+  height: 1,
+  backgroundColor: '#fff',
+  width: '98%',
+  marginLeft: '1%',
+  shadowColor: '#000',
+  shadowOffset: {width: 1, height: 1},
+  shadowOpacity: 0.4,
+  shadowRadius: 3,
+  elevation: 5,
 };

@@ -10,7 +10,7 @@ import {
   SavedReceiptData,
   SavedReceiptDetailTabs,
 } from '../../data/data';
-import {getHeight, getWidth} from '../../utils/Dimension';
+import {getHeight, getWidth, setWidth} from '../../utils/Dimension';
 import {showSuccessMessage} from '../../utils/helper';
 
 const SavedReceiptDetail = (props: any) => {
@@ -32,36 +32,49 @@ const SavedReceiptDetail = (props: any) => {
         <Tab
           items={SavedReceiptDetailTabs}
           containerStyle={styles.secondTab}
+          textStyle={{fontSize: 15}}
           active={activeTab}
           onPress={onMainTabPress}
         />
 
         {activeTab == 1 ? (
           <View>
-            <View style={{flexDirection: 'row', marginTop: 10}}>
-              <Text style={styles.foodName}>ХООЛНЫ НЭР :</Text>
+            <View
+              style={{
+                flexDirection: 'row',
+                marginTop: 15,
+                borderTopWidth: 1,
+                borderBottomWidth: 1,
+                borderColor: COLORS.DEFAULT_COLOR,
+                height: 35,
+                width: getWidth(),
+                marginLeft: -20,
+                paddingLeft: 20,
+                alignItems: 'center',
+              }}>
+              <Text style={styles.foodName}>ХООЛНЫ НЭР : </Text>
               <Text style={styles.textValue}>Тефтель</Text>
             </View>
-            <View style={{flexDirection: 'row', marginTop: 10}}>
-              <Text style={styles.textValue}>1 </Text>
+            <View style={{flexDirection: 'row', marginTop: 15}}>
+              <Text style={styles.textValue}>1</Text>
               <Text style={[styles.textValue, {marginLeft: 10}]}>
                 Үхрийн махыг 2-3 удаа машиндана.
               </Text>
             </View>
-            <View style={{flexDirection: 'row', marginTop: 10}}>
+            <View style={{flexDirection: 'row', marginTop: 15}}>
               <Text style={styles.textValue}>2</Text>
               <Text style={[styles.textValue, {marginLeft: 10}]}>
                 Цагаан будааг 2-3 удаа усаар угааж зайлна.
               </Text>
             </View>
-            <View style={{flexDirection: 'row', marginTop: 10}}>
+            <View style={{flexDirection: 'row', marginTop: 15}}>
               <Text style={styles.textValue}>3</Text>
               <Text style={[styles.textValue, {marginLeft: 10}]}>
                 Бөөрөнхий сонгиныг угааж, цэвэрлэн жижиг хярж хэрчинэ. Талхны
                 хатаамалыг усанд дэвтээнэ.
               </Text>
             </View>
-            <View style={{flexDirection: 'row', marginTop: 10}}>
+            <View style={{flexDirection: 'row', marginTop: 15}}>
               <Text style={styles.textValue}>4</Text>
               <Text style={[styles.textValue, {marginLeft: 10}]}>
                 Машиндсан үхрийн махан дээр агшаасан будаа, хярж хэрчсэн
@@ -69,7 +82,7 @@ const SavedReceiptDetail = (props: any) => {
                 махны шанзыг бэлтгэнэ.
               </Text>
             </View>
-            <View style={{flexDirection: 'row', marginTop: 10}}>
+            <View style={{flexDirection: 'row', marginTop: 15}}>
               <Text style={styles.textValue}>5</Text>
               <Text style={[styles.textValue, {marginLeft: 10}]}>
                 Махан шанзнаас 40 гр таслан авч, бөөрөнхий хэлбэрт оруулан
@@ -77,7 +90,7 @@ const SavedReceiptDetail = (props: any) => {
                 15-20 минут шарна.
               </Text>
             </View>
-            <View style={{flexDirection: 'row', marginVertical: 10}}>
+            <View style={{flexDirection: 'row', marginVertical: 15}}>
               <Text style={styles.textValue}>6</Text>
               <Text style={[styles.textValue, {marginLeft: 10}]}>
                 Бэлэн болсон тефтелийг таваглан сүмсээр амтлан 2 төрлийн
@@ -97,7 +110,7 @@ const SavedReceiptDetail = (props: any) => {
                     width: getWidth(),
                   }}></View>
               )}
-              style={{marginTop: 30}}
+              style={{marginTop: 30, width: setWidth(110), marginLeft: -20}}
               data={SavedReceiptData}
               keyExtractor={({item, index}: any) => index}
               renderItem={({item, index}: any) => (
@@ -252,7 +265,7 @@ const styles = StyleSheet.create({
   },
   foodName: {
     fontSize: 15,
-    fontFamily: FONTS.bold,
+    fontFamily: FONTS.mulishSemiBold,
     color: COLORS.textColor,
   },
   textValue: {

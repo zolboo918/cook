@@ -33,7 +33,7 @@ const CounterButton = (props: any) => {
             value={count.toString()}
             style={[
               styles.value,
-              {fontSize: count > 999 ? 18 : count > 99 ? 22 : 24},
+              {fontSize: count > 999 ? 18 : count > 99 ? 21 : 24},
             ]}
             keyboardType="number-pad"
             onChangeText={val => setCount(Number(val))}
@@ -90,6 +90,8 @@ const styles = StyleSheet.create({
   },
   unit: {
     color: COLORS.textColor,
+    fontFamily: FONTS.mulishSemiBold,
+    fontSize: 14,
     // marginTop: 5,
     marginRight: 5,
   },

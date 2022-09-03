@@ -184,6 +184,7 @@ const styles = StyleSheet.create({
   },
   headerSubTitle: {
     color: '#090F87',
+    fontFamily: FONTS.mulishRegular,
     fontSize: 11,
   },
   backRightBtnLeft: {

@@ -18,7 +18,11 @@ const Health = (props: any) => {
   };
   return (
     <View style={styles.container}>
-      <Header title={'Эрүүл ахуйн хяналт'} rightIconShow={true} />
+      <Header
+        title={'Эрүүл ахуйн хяналт'}
+        rightIconShow={true}
+        titleStyle={{marginTop: 10}}
+      />
       <View style={styles.wrapper}>
         <MenuListItem
           leftIcon={'apple-o'}

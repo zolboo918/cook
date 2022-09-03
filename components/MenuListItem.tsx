@@ -31,6 +31,7 @@ const MenuListItem = (props: any) => {
           style={styles.rightIcon}
         />
       </TouchableOpacity>
+      <View style={styles.shadow} />
     </View>
   );
 };
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
     borderColor: COLORS.DEFAULT_COLOR,
     height: 44,
     borderRadius: 6,
-    marginBottom: 20,
+    marginTop: 20,
     width: '100%',
     // justifyContent: 'space-between',
     alignItems: 'center',
@@ -62,9 +63,20 @@ const styles = StyleSheet.create({
     width: '85%',
   },
   rightIcon: {
-    fontSize: 20,
+    fontSize: 26,
     color: COLORS.DEFAULT_COLOR,
     width: '7.5%',
     textAlign: 'right',
+  },
+  shadow: {
+    height: 1,
+    backgroundColor: '#fff',
+    width: '98%',
+    marginLeft: '1%',
+    shadowColor: '#000',
+    shadowOffset: {width: 1, height: 1},
+    shadowOpacity: 0.4,
+    shadowRadius: 3,
+    elevation: 5,
   },
 });

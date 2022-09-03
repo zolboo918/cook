@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     height: 80,
     width: setWidth(25),
     alignSelf: 'center',
-    // marginTop: 10,
+    marginTop: 10,
   },
   name: {
     fontSize: 15,

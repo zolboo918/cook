@@ -1,15 +1,19 @@
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
-import {Platform, StatusBar, StyleSheet, Text} from 'react-native';
+import {StyleSheet, Text} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import Home from '../screens/Home';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Menu from '../screens/menu/Menu';
-import Requirement from '../screens/requirement/Requirement';
-import Health from '../screens/health/Health';
 import {COLORS} from '../constants';
+import {
+  HealthStackScreen,
+  HomeStackScreen,
+  MenuStackScreen,
+  RequirementStackScreen,
+} from './StackNavigation';
 
 const Tab = createMaterialBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 function BottomTabs() {
   const insets = useSafeAreaInsets();
   const statusBarHeight = insets.top;
@@ -24,7 +28,7 @@ function BottomTabs() {
       barStyle={styles.barStyle}>
       <Tab.Screen
         name="Home"
-        component={Home}
+        component={HomeStackScreen}
         options={{
           tabBarLabel: <Text style={styles.title}>Нүүр</Text>,
           tabBarIcon: ({color, focused}) => (
@@ -38,7 +42,7 @@ function BottomTabs() {
       />
       <Tab.Screen
         name="Menu"
-        component={Menu}
+        component={MenuStackScreen}
         options={{
           tabBarIcon: ({color, focused}) => (
             <MaterialCommunityIcons
@@ -53,7 +57,7 @@ function BottomTabs() {
       />
       <Tab.Screen
         name="Requirement"
-        component={Requirement}
+        component={RequirementStackScreen}
         options={{
           tabBarIcon: ({color, focused}) => (
             <MaterialCommunityIcons
@@ -71,7 +75,7 @@ function BottomTabs() {
       />
       <Tab.Screen
         name="Health"
-        component={Health}
+        component={HealthStackScreen}
         options={{
           tabBarIcon: ({color, focused}) => (
             <MaterialCommunityIcons

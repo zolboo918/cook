@@ -16,81 +16,131 @@ import MyRequirement from '../screens/requirement/MyRequirement';
 import Health1 from '../screens/health/Health1';
 import ReceiveFoodMaterial from '../screens/health/ReceiveFoodMaterial';
 import Register from '../screens/Register';
+import Menu from '../screens/menu/Menu';
+import Requirement from '../screens/requirement/Requirement';
+import Health from '../screens/health/Health';
 
-const Stack = createNativeStackNavigator();
+const HomeStack = createNativeStackNavigator();
 
-function StackNavigation() {
+export function HomeStackScreen() {
   return (
     <View style={styles.container}>
       <SafeAreaView style={{flex: 1}}>
-        <Stack.Navigator initialRouteName="BottomNavigation">
-          <Stack.Screen
-            name="Register"
-            component={Register}
+        <HomeStack.Navigator>
+          <HomeStack.Screen
+            name="Home"
+            component={Home}
             options={{headerShown: false}}
           />
-          <Stack.Screen
-            name="BottomNavigation"
-            component={BottomNavigation}
-            options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="ProcessFoodMenu"
-            component={ProcessFoodMenuList}
-            options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="ProcessFoodMenuDetail"
-            component={ProcessFoodMenuDetail}
-            options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="SavedReceipt"
-            component={SavedReceipt}
-            options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="SavedReceiptDetail"
-            component={SavedReceiptDetail}
-            options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="ExampleMenu"
-            component={ExampleMenu}
-            options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="ExampleSubMenu"
-            component={ExampleSubMenu}
-            options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="CreateRequirement"
-            component={CreateRequirement}
-            options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="MyRequirement"
-            component={MyRequirement}
-            options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="Health1"
-            component={Health1}
-            options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="ReceiveFoodMaterial"
-            component={ReceiveFoodMaterial}
-            options={{headerShown: false}}
-          />
-        </Stack.Navigator>
+        </HomeStack.Navigator>
       </SafeAreaView>
     </View>
   );
 }
 
-export default StackNavigation;
+const MenuStack = createNativeStackNavigator();
+
+export function MenuStackScreen() {
+  return (
+    <View style={styles.container}>
+      <SafeAreaView style={{flex: 1}}>
+        <MenuStack.Navigator>
+          <MenuStack.Screen
+            name="Menu"
+            component={Menu}
+            options={{headerShown: false}}
+          />
+          <MenuStack.Screen
+            name="ProcessFoodMenu"
+            component={ProcessFoodMenuList}
+            options={{headerShown: false}}
+          />
+          <MenuStack.Screen
+            name="ProcessFoodMenuDetail"
+            component={ProcessFoodMenuDetail}
+            options={{headerShown: false}}
+          />
+          <MenuStack.Screen
+            name="SavedReceipt"
+            component={SavedReceipt}
+            options={{headerShown: false}}
+          />
+          <MenuStack.Screen
+            name="SavedReceiptDetail"
+            component={SavedReceiptDetail}
+            options={{headerShown: false}}
+          />
+          <MenuStack.Screen
+            name="ExampleMenu"
+            component={ExampleMenu}
+            options={{headerShown: false}}
+          />
+          <MenuStack.Screen
+            name="ExampleSubMenu"
+            component={ExampleSubMenu}
+            options={{headerShown: false}}
+          />
+        </MenuStack.Navigator>
+      </SafeAreaView>
+    </View>
+  );
+}
+
+const RequirementStack = createNativeStackNavigator();
+
+export function RequirementStackScreen() {
+  return (
+    <View style={styles.container}>
+      <SafeAreaView style={{flex: 1}}>
+        <RequirementStack.Navigator>
+          <RequirementStack.Screen
+            name="Requirement"
+            component={Requirement}
+            options={{headerShown: false}}
+          />
+          <RequirementStack.Screen
+            name="CreateRequirement"
+            component={CreateRequirement}
+            options={{headerShown: false}}
+          />
+          <RequirementStack.Screen
+            name="MyRequirement"
+            component={MyRequirement}
+            options={{headerShown: false}}
+          />
+        </RequirementStack.Navigator>
+      </SafeAreaView>
+    </View>
+  );
+}
+
+const HealthStack = createNativeStackNavigator();
+
+export function HealthStackScreen() {
+  return (
+    <View style={styles.container}>
+      <SafeAreaView style={{flex: 1}}>
+        <HealthStack.Navigator>
+          <HealthStack.Screen
+            name="Healt"
+            component={Health}
+            options={{headerShown: false}}
+          />
+          <HealthStack.Screen
+            name="Health1"
+            component={Health1}
+            options={{headerShown: false}}
+          />
+          <HealthStack.Screen
+            name="ReceiveFoodMaterial"
+            component={ReceiveFoodMaterial}
+            options={{headerShown: false}}
+          />
+        </HealthStack.Navigator>
+      </SafeAreaView>
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {

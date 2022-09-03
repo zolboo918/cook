@@ -24,6 +24,7 @@ const Menu = (props: any) => {
           leftIcon={'book'}
           name={'Хоолны цэс боловсруулах'}
           onPress={press1}
+          shadow={true}
         />
         <MenuListItem
           leftIcon={'pushpino'}

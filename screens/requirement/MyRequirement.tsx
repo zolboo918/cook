@@ -41,7 +41,7 @@ const MyRequirement = (props: any) => {
         leftIconPress={props.navigation.goBack}
       />
       <View style={styles.wrapper}>
-        <View style={{flexDirection: 'row', marginTop: 10}}>
+        <View style={{flexDirection: 'row', marginTop: 10, marginLeft: 30}}>
           <Text style={styles.foodName}>ОГНОО :</Text>
           <Text style={styles.textValue}> 2022.03.22</Text>
         </View>
@@ -113,11 +113,11 @@ const styles = StyleSheet.create({
   modalContainer: {
     backgroundColor: 'rgba(0,0,0,0.5)',
     // flex: 1,
-    height: setHeight(75),
-    marginTop: setHeight(10),
+    height: setHeight(66),
+    marginTop: setHeight(22.2),
   },
   modal: {
-    height: '60%',
+    height: '70%',
     width: '80%',
     alignSelf: 'center',
     backgroundColor: '#fff',
@@ -135,10 +135,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: 115,
+    borderRightWidth: 0,
   },
   clearButtonText: {
     color: '#858C94',
     fontWeight: 'bold',
+    fontSize: 15,
+    fontFamily: FONTS.mulishSemiBold,
   },
   chooseButton: {
     height: 34,
@@ -150,6 +153,8 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.DEFAULT_COLOR,
   },
   chooseButtonText: {
+    fontSize: 15,
+    fontFamily: FONTS.mulishSemiBold,
     color: COLORS.textColor,
     fontWeight: 'bold',
   },

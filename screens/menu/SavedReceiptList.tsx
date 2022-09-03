@@ -59,12 +59,13 @@ const styles = StyleSheet.create({
   },
 
   searchInput: {
-    borderWidth: 0.5,
+    borderWidth: 0.3,
     borderColor: COLORS.DEFAULT_COLOR,
     backgroundColor: '#858C9410',
     padding: 10,
-    fontFamily: FONTS.regular,
+    fontFamily: FONTS.mulishLight,
     borderRadius: 6,
+    height: 40,
   },
   searchIcon: {
     position: 'absolute',

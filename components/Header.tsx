@@ -88,8 +88,8 @@ const styles = StyleSheet.create({
   },
   title: {
     color: '#fff',
-    fontSize: 26,
-    fontFamily: FONTS.mulishBlack,
+    fontSize: 23,
+    fontFamily: FONTS.mulishExtraBold,
     textAlign: 'center',
   },
   rightContainer: {

@@ -1,7 +1,7 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {COLORS} from '../constants';
+import {COLORS, FONTS} from '../constants';
 import {Radio} from 'native-base';
 
 const RadioListItem = (props: any) => {
@@ -71,17 +71,20 @@ const styles = StyleSheet.create({
   },
   name: {
     color: COLORS.textColor,
+    fontFamily: FONTS.mulishRegular,
     fontSize: 15,
     textAlign: 'center',
   },
   unit: {
     color: '#090F8780',
     fontSize: 15,
+    fontFamily: FONTS.mulishRegular,
     textAlign: 'center',
     marginBottom: 20,
   },
   radioContainer: {
     flexDirection: 'row',
+
     width: '60%',
     marginLeft: '10%',
   },

@@ -10,6 +10,7 @@ import {
   View,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import {shadow} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import CardCounterButtonItem from '../../components/CardCounterButtonItem';
@@ -17,7 +18,7 @@ import CardItem from '../../components/CardItem';
 import CounterButton from '../../components/CounterButton';
 import Header from '../../components/Header';
 import Tab from '../../components/Tab';
-import {COLORS, FONTS} from '../../constants';
+import {COLORS, FONTS, shadowStyle} from '../../constants';
 import {
   FoodData,
   ProcessFoodMenuDetailTabs,
@@ -55,6 +56,8 @@ const ProcessFoodMenuDetail = (props: any) => {
         <Tab
           items={ProcessFoodMenuDetailTabs}
           containerStyle={styles.secondTab}
+          textStyle={{fontSize: 14}}
+          shadow={true}
           active={activeTab}
           onPress={onMainTabPress}
         />
@@ -84,35 +87,35 @@ const ProcessFoodMenuDetail = (props: any) => {
             <Text style={styles.childText}> Хүүхдийн тоо</Text>
           </View>
           <View style={{marginRight: setWidth(12)}}>
-            <CounterButton />
+            <CounterButton value={10} />
           </View>
         </View>
         {activeTab == 1 ? (
           <View>
             <View style={{flexDirection: 'row', marginTop: 10}}>
-              <Text style={styles.foodName}>ХООЛНЫ НЭР :</Text>
+              <Text style={styles.foodName}>ХООЛНЫ НЭР : </Text>
               <Text style={styles.textValue}>Тефтель</Text>
             </View>
-            <View style={{flexDirection: 'row', marginTop: 10}}>
+            <View style={{flexDirection: 'row', marginTop: 15}}>
               <Text style={styles.textValue}>1 </Text>
               <Text style={[styles.textValue, {marginLeft: 10}]}>
                 Үхрийн махыг 2-3 удаа машиндана.
               </Text>
             </View>
-            <View style={{flexDirection: 'row', marginTop: 10}}>
+            <View style={{flexDirection: 'row', marginTop: 15}}>
               <Text style={styles.textValue}>2</Text>
               <Text style={[styles.textValue, {marginLeft: 10}]}>
                 Цагаан будааг 2-3 удаа усаар угааж зайлна.
               </Text>
             </View>
-            <View style={{flexDirection: 'row', marginTop: 10}}>
+            <View style={{flexDirection: 'row', marginTop: 15}}>
               <Text style={styles.textValue}>3</Text>
               <Text style={[styles.textValue, {marginLeft: 10}]}>
                 Бөөрөнхий сонгиныг угааж, цэвэрлэн жижиг хярж хэрчинэ. Талхны
                 хатаамалыг усанд дэвтээнэ.
               </Text>
             </View>
-            <View style={{flexDirection: 'row', marginTop: 10}}>
+            <View style={{flexDirection: 'row', marginTop: 15}}>
               <Text style={styles.textValue}>4</Text>
               <Text style={[styles.textValue, {marginLeft: 10}]}>
                 Машиндсан үхрийн махан дээр агшаасан будаа, хярж хэрчсэн
@@ -120,7 +123,7 @@ const ProcessFoodMenuDetail = (props: any) => {
                 махны шанзыг бэлтгэнэ.
               </Text>
             </View>
-            <View style={{flexDirection: 'row', marginTop: 10}}>
+            <View style={{flexDirection: 'row', marginTop: 15}}>
               <Text style={styles.textValue}>5</Text>
               <Text style={[styles.textValue, {marginLeft: 10}]}>
                 Махан шанзнаас 40 гр таслан авч, бөөрөнхий хэлбэрт оруулан
@@ -128,7 +131,7 @@ const ProcessFoodMenuDetail = (props: any) => {
                 15-20 минут шарна.
               </Text>
             </View>
-            <View style={{flexDirection: 'row', marginVertical: 10}}>
+            <View style={{flexDirection: 'row', marginVertical: 15}}>
               <Text style={styles.textValue}>6</Text>
               <Text style={[styles.textValue, {marginLeft: 10}]}>
                 Бэлэн болсон тефтелийг таваглан сүмсээр амтлан 2 төрлийн
@@ -150,18 +153,20 @@ const ProcessFoodMenuDetail = (props: any) => {
                 />
               )}
             />
-
-            <View style={styles.createCard}>
-              <TouchableOpacity style={styles.addButtonContainer}>
-                <Icon name="plus" style={styles.addIcon} />
-              </TouchableOpacity>
-              <Text style={styles.createCardText}>Шаардах хуудас үүсгэх</Text>
-              <MaterialCommunityIcons
-                name="checkbox-multiple-marked-outline"
-                style={styles.createCardIcon}
-              />
+            <View>
+              <View style={styles.createCard}>
+                <TouchableOpacity style={styles.addButtonContainer}>
+                  <Icon name="plus" style={styles.addIcon} />
+                </TouchableOpacity>
+                <Text style={styles.createCardText}>Шаардах хуудас үүсгэх</Text>
+                <MaterialCommunityIcons
+                  name="checkbox-multiple-marked-outline"
+                  style={styles.createCardIcon}
+                />
+              </View>
+              <View style={shadowStyle} />
             </View>
-            <View style={styles.headerTextContainer}>
+            <View style={[styles.headerTextContainer, {height: 54}]}>
               <View style={styles.headerInfoItem2}>
                 <Text style={styles.headerTextTitle2}>Тэмдэглэл</Text>
               </View>
@@ -175,15 +180,16 @@ const ProcessFoodMenuDetail = (props: any) => {
                 placeholder="Энд тэмдэглэл бичнэ үү."
               />
             </LinearGradient>
-            <TouchableOpacity
-              style={[styles.createCard, {marginBottom: 20}]}
-              onPress={onSave}>
-              <Text style={styles.createCardText}>Тэмдэглэл бичих</Text>
-              <MaterialCommunityIcons
-                name="note-outline"
-                style={styles.createCardIcon}
-              />
-            </TouchableOpacity>
+            <View style={{marginBottom: 20}}>
+              <TouchableOpacity style={[styles.createCard2]} onPress={onSave}>
+                <Text style={styles.createCardText}>Тэмдэглэл бичих</Text>
+                <MaterialCommunityIcons
+                  name="note-outline"
+                  style={styles.createCardIcon}
+                />
+              </TouchableOpacity>
+              <View style={shadowStyle} />
+            </View>
           </View>
         )}
       </View>
@@ -210,7 +216,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginTop: 20,
     // paddingVertical: 10,
-    height: 60,
+    height: 35,
     borderTopWidth: 0.7,
     borderBottomWidth: 0.7,
     borderColor: COLORS.DEFAULT_COLOR,
@@ -222,10 +228,10 @@ const styles = StyleSheet.create({
     color: COLORS.textColor,
     fontFamily: FONTS.mulishRegular,
     fontSize: 15,
-    marginLeft: 20,
+    marginLeft: 15,
   },
   headerTextTitle2: {
-    color: COLORS.textColor + '70',
+    color: COLORS.textColor + '60',
     fontFamily: FONTS.mulishRegular,
     fontSize: 15,
   },
@@ -263,7 +269,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: COLORS.DEFAULT_COLOR,
     borderRadius: 6,
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
     width: '55%',
   },
@@ -282,6 +288,17 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     borderColor: COLORS.DEFAULT_COLOR,
     height: setHeight(9),
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    marginTop: 36,
+  },
+  createCard2: {
+    width: '100%',
+    borderWidth: 1,
+    borderRadius: 6,
+    borderColor: COLORS.DEFAULT_COLOR,
+    height: 41,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     alignItems: 'center',
@@ -325,7 +342,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
   },
   note: {
-    height: 100,
+    height: 107,
     padding: 10,
     borderRadius: 6,
     fontFamily: FONTS.mulishRegular,
@@ -333,12 +350,13 @@ const styles = StyleSheet.create({
   },
   foodName: {
     fontSize: 15,
-    fontFamily: FONTS.bold,
+    fontFamily: FONTS.mulishSemiBold,
     color: COLORS.textColor,
   },
   textValue: {
     fontSize: 15,
-    fontFamily: FONTS.regular,
+    textAlignVertical: 'center',
+    fontFamily: FONTS.mulishRegular,
     color: COLORS.textColor,
   },
 });

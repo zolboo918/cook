@@ -34,7 +34,7 @@ const Health1 = (props: any) => {
       <Header
         leftIcon={'back'}
         title={'1. Хүнсний түүхий эд '}
-        titleStyle={{fontSize: 22}}
+        titleStyle={{fontSize: 22, marginTop: 10}}
         leftIconPress={props.navigation.goBack}
       />
       <View style={styles.wrapper}>
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
   },
   wrapper: {
     marginTop: 20,
-    paddingHorizontal: 20,
+    // paddingHorizontal: 20,
   },
 
   modalContainer: {
@@ -159,6 +159,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontFamily: FONTS.bold,
     color: COLORS.textColor,
+    marginLeft: 20,
   },
   textValue: {
     fontSize: 15,
@@ -196,23 +197,24 @@ const styles = StyleSheet.create({
     fontSize: 26,
   },
   buttonText: {
-    width: '90%',
+    width: '85%',
     textAlign: 'center',
     color: COLORS.textColor,
     fontSize: 26,
   },
   registerButton: {
-    width: '100%',
+    width: '90%',
+    marginLeft: '5%',
     height: 40,
     borderRadius: 6,
     borderColor: COLORS.DEFAULT_COLOR,
     borderWidth: 0.5,
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: setHeight(20),
+    marginTop: setHeight(10),
   },
   registerButtonIcon: {
-    width: '10%',
+    width: '15%',
     textAlign: 'center',
     color: COLORS.DEFAULT_COLOR,
     fontSize: 26,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {FlatList, ScrollView, StyleSheet, Text, View} from 'react-native';
 import ChartItem from '../components/ChartItem';
 import Header from '../components/Header';
@@ -9,9 +9,14 @@ import {getHeight} from '../utils/Dimension';
 import CardItem from '../components/CardItem';
 
 const Home = () => {
+  const [activeTab, setActiveTab] = useState();
   const data = {
     // labels: [''], // optional
     data: [0.4],
+  };
+
+  const onTabPress = (index: any) => {
+    setActiveTab(index);
   };
 
   return (
@@ -22,7 +27,12 @@ const Home = () => {
         rightIconShow={true}
       />
       <View style={styles.wrapper}>
-        <Tab items={HomeTab} textStyle={{fontFamily: FONTS.bold}} />
+        <Tab
+          items={HomeTab}
+          activeTab={activeTab}
+          textStyle={{fontFamily: FONTS.bold}}
+          onPress={onTabPress}
+        />
       </View>
       <View style={styles.headerTextContainer}>
         <Text style={styles.headerTextTitle}>

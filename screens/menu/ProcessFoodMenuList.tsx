@@ -12,7 +12,7 @@ import React, {useEffect, useState} from 'react';
 import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
 import Header from '../../components/Header';
 import {getHeight, setHeight} from '../../utils/Dimension';
-import {COLORS, FONTS} from '../../constants';
+import {COLORS, FONTS, shadowStyle} from '../../constants';
 import MyCalendar from '../../components/MyCalendar';
 import Tab from '../../components/Tab';
 import {
@@ -61,6 +61,7 @@ const ProcessFoodMenuList = (props: any) => {
           items={ProcessFoogMenuSecondTabs}
           containerStyle={styles.secondTab}
           active={secondActiveTab}
+          shadow={true}
           textStyle={{fontFamily: FONTS.mulishSemiBold, fontSize: 15}}
           onPress={onSecondTabPress}
         />
@@ -129,11 +130,11 @@ const styles = StyleSheet.create({
   modalContainer: {
     backgroundColor: 'rgba(0,0,0,0.5)',
     // flex: 1,
-    height: setHeight(75),
-    marginTop: setHeight(10),
+    height: setHeight(66),
+    marginTop: setHeight(22.2),
   },
   modal: {
-    height: '60%',
+    height: '70%',
     width: '80%',
     alignSelf: 'center',
     backgroundColor: '#fff',
@@ -148,6 +149,7 @@ const styles = StyleSheet.create({
     borderColor: '#858C94',
     borderTopLeftRadius: 6,
     borderBottomLeftRadius: 6,
+    borderRightWidth: 0,
     justifyContent: 'center',
     alignItems: 'center',
     width: 115,
@@ -156,8 +158,11 @@ const styles = StyleSheet.create({
     color: '#858C94',
     fontWeight: 'bold',
     fontFamily: FONTS.mulishBlack,
+    fontSize: 15,
   },
   chooseButton: {
+    ...shadowStyle,
+    marginLeft: 0,
     height: 34,
     borderTopRightRadius: 6,
     borderBottomRightRadius: 6,
@@ -169,18 +174,22 @@ const styles = StyleSheet.create({
   chooseButtonText: {
     color: COLORS.textColor,
     fontWeight: 'bold',
+    fontSize: 15,
     fontFamily: FONTS.mulishBlack,
   },
   headerTextContainer: {
     flexDirection: 'row',
     marginTop: 20,
+    marginLeft: 10,
   },
   headerTextTitle: {
     color: COLORS.textColor,
     fontFamily: FONTS.mulishSemiBold,
+    fontSize: 15,
   },
   headerText: {
     color: COLORS.textColor,
     fontFamily: FONTS.mulishRegular,
+    fontSize: 15,
   },
 });

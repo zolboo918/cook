@@ -45,7 +45,7 @@ const ExampleSubMenu = (props: any) => {
         <View style={styles.line}></View>
         <FlatList
           numColumns={1}
-          style={{marginTop: 10}}
+          style={{marginTop: 10, width: getWidth()}}
           data={ExampleSubMenuData}
           keyExtractor={({item, index}: any) => index}
           renderItem={({item}: any) => (
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   },
   wrapper: {
     marginTop: 30,
-    paddingHorizontal: 20,
+    // paddingHorizontal: 20,
   },
 
   searchInput: {
@@ -79,6 +79,9 @@ const styles = StyleSheet.create({
     borderColor: COLORS.DEFAULT_COLOR,
     backgroundColor: '#858C9410',
     padding: 10,
+    height: 40,
+    width: '90%',
+    marginLeft: '5%',
     fontFamily: FONTS.regular,
     borderRadius: 6,
   },
@@ -86,18 +89,18 @@ const styles = StyleSheet.create({
     position: 'absolute',
     color: COLORS.DEFAULT_COLOR,
     fontSize: 20,
-    right: 12,
-    top: '30%',
+    right: 30,
+    top: '24%',
   },
   line: {
-    height: 1,
+    height: 0.7,
     marginTop: 24,
     width: getWidth(),
     marginLeft: -20,
     backgroundColor: COLORS.DEFAULT_COLOR,
   },
   itemContainer: {
-    marginRight: 10,
+    // marginRight: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
     borderBottomWidth: 0.5,
@@ -106,6 +109,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     borderRadius: 6,
     paddingVertical: 5,
+    // width: getWidth(),
   },
   itemImage: {
     height: 75,
@@ -115,11 +119,12 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontFamily: FONTS.mulishSemiBold,
     color: COLORS.textColor,
+    marginLeft: 5,
   },
   itemIcon: {
     color: COLORS.DEFAULT_COLOR,
     fontSize: 28,
     marginRight: 20,
-    transform: [{rotateX: '45deg'}, {rotateZ: '-45deg'}],
+    transform: [{rotateX: '45deg'}, {rotateZ: '-30deg'}],
   },
 });
