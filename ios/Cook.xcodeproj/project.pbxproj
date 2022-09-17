@@ -24,6 +24,7 @@
 		B23B9C1A31BE431BB5A0B3F0 /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FDEE3C663624971BAB534B1 /* Mulish-Regular.ttf */; };
 		77CEEAB6A41B4596AC0F316A /* Mulish-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF873D80F64A43DE9003E0FE /* Mulish-SemiBold.ttf */; };
 		EF7DD2C35F2845C09DC0BBDE /* Mulish-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF9DC26046A742A7A10D7653 /* Mulish-Bold.ttf */; };
+		F173DB7B9E89417F8D0250F7 /* commissioner-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30917654E9894B4C88C165E2 /* commissioner-italic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		9FDEE3C663624971BAB534B1 /* Mulish-Regular.ttf */ = {isa = PBXFileReference; name = "Mulish-Regular.ttf"; path = "../assets/fonts/Mulish-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		AF873D80F64A43DE9003E0FE /* Mulish-SemiBold.ttf */ = {isa = PBXFileReference; name = "Mulish-SemiBold.ttf"; path = "../assets/fonts/Mulish-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		FF9DC26046A742A7A10D7653 /* Mulish-Bold.ttf */ = {isa = PBXFileReference; name = "Mulish-Bold.ttf"; path = "../assets/fonts/Mulish-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		30917654E9894B4C88C165E2 /* commissioner-italic.ttf */ = {isa = PBXFileReference; name = "commissioner-italic.ttf"; path = "../assets/fonts/commissioner-italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 				9FDEE3C663624971BAB534B1 /* Mulish-Regular.ttf */,
 				AF873D80F64A43DE9003E0FE /* Mulish-SemiBold.ttf */,
 				FF9DC26046A742A7A10D7653 /* Mulish-Bold.ttf */,
+				30917654E9894B4C88C165E2 /* commissioner-italic.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				B23B9C1A31BE431BB5A0B3F0 /* Mulish-Regular.ttf in Resources */,
 				77CEEAB6A41B4596AC0F316A /* Mulish-SemiBold.ttf in Resources */,
 				EF7DD2C35F2845C09DC0BBDE /* Mulish-Bold.ttf in Resources */,
+				F173DB7B9E89417F8D0250F7 /* commissioner-italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

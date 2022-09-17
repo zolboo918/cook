@@ -40,6 +40,10 @@
     {
       "path": "assets/fonts/Mulish-SemiBold.ttf",
       "sha1": "acaafc30e6e58676eae869901793e156afc22b63"
+    },
+    {
+      "path": "assets/fonts/commissioner-italic.ttf",
+      "sha1": "95920b3d5abf342ace83356691a51602a30628fd"
     }
   ]
 }

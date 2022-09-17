@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0.5)',
   },
   modalView: {
-    paddingVertical: 10,
+    paddingVertical: 20,
     marginHorizontal: 20,
     width: Dimensions.get('screen').width - 40,
     backgroundColor: '#fff',
@@ -49,7 +49,7 @@ export const styles = StyleSheet.create({
     marginBottom: 30,
   },
   textStyle: {
-    color: '#fff',
+    color: '#000',
     fontWeight: 'bold',
     textAlign: 'center',
     fontSize: 17,

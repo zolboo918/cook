@@ -19,6 +19,9 @@ import Register from '../screens/Register';
 import Menu from '../screens/menu/Menu';
 import Requirement from '../screens/requirement/Requirement';
 import Health from '../screens/health/Health';
+import RequirementDetail from '../screens/requirement/RequirementDetail';
+import MetarialGive from '../screens/requirement/MetarialGive';
+import ReceiveMaterial from '../screens/requirement/ReceiveMaterial';
 
 const HomeStack = createNativeStackNavigator();
 
@@ -96,6 +99,21 @@ export function RequirementStackScreen() {
           <RequirementStack.Screen
             name="Requirement"
             component={Requirement}
+            options={{headerShown: false}}
+          />
+          <RequirementStack.Screen
+            name="RequirementDetail"
+            component={RequirementDetail}
+            options={{headerShown: false}}
+          />
+          <RequirementStack.Screen
+            name="RequirementMetarialGive"
+            component={MetarialGive}
+            options={{headerShown: false}}
+          />
+          <RequirementStack.Screen
+            name="RequirementReceiveMaterial"
+            component={ReceiveMaterial}
             options={{headerShown: false}}
           />
           <RequirementStack.Screen

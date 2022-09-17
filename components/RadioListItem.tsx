@@ -3,10 +3,12 @@ import React, {useState} from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {COLORS, FONTS} from '../constants';
 import {Radio} from 'native-base';
+import MyCheckbox from './MyCheckbox';
 
 const RadioListItem = (props: any) => {
   const {item} = props;
-  const [radioValue, setRadioValue] = useState('one');
+  const [radioValue, setRadioValue] = useState();
+
   return (
     <View style={styles.itemContainer}>
       <View style={styles.infoContainer}>
@@ -23,7 +25,20 @@ const RadioListItem = (props: any) => {
           {item.endDate}
         </Text>
       </View>
-      <Radio.Group
+      <MyCheckbox
+        count={2}
+        style={styles.checkItem}
+        value={radioValue}
+        onValueChange={(val: any) => {
+          setRadioValue(val);
+        }}
+      />
+      {/* <MyCheckbox
+        style={styles.checkItem2}
+        value={radioValue}
+        onValueChange={() => setRadioValue(radioValue == '0' ? '1' : '0')}
+      /> */}
+      {/* <Radio.Group
         name="myRadioGroup"
         accessibilityLabel="favorite number"
         flexDirection={'row'}
@@ -39,7 +54,7 @@ const RadioListItem = (props: any) => {
             <Radio value={item.notNormal} my={1}></Radio>
           </View>
         </View>
-      </Radio.Group>
+      </Radio.Group> */}
     </View>
   );
 };
@@ -59,6 +74,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: COLORS.DEFAULT_COLOR + '50',
     marginTop: 40,
+    marginLeft: 5,
   },
   infoIcon: {
     fontSize: 12,
@@ -87,5 +103,15 @@ const styles = StyleSheet.create({
 
     width: '60%',
     marginLeft: '10%',
+  },
+  checkItem: {
+    width: '25%',
+    // justifyContent: 'center',
+    alignItems: 'center',
+  },
+  checkItem2: {
+    width: '15%',
+    // justifyContent: 'center',
+    alignItems: 'center',
   },
 });

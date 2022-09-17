@@ -455,7 +455,7 @@ export const HealthFoodData = [
 
 export const ReceiveHealthFoodData = [
   {
-    image: require('../assets/images/1rhool.png'),
+    image: require('../assets/images/mah.png'),
     name: 'Үхрийн мах /ясгүй',
     unit: '10 кг',
     endDate: '2022.06.01',
@@ -463,7 +463,7 @@ export const ReceiveHealthFoodData = [
     notNormal: false,
   },
   {
-    image: require('../assets/images/1rhool.png'),
+    image: require('../assets/images/tums.png'),
     name: 'Төмс ',
     unit: '5 кг',
     endDate: '2022.06.01',
@@ -471,7 +471,7 @@ export const ReceiveHealthFoodData = [
     notNormal: false,
   },
   {
-    image: require('../assets/images/1rhool.png'),
+    image: require('../assets/images/baitsai.png'),
     name: 'Байцаа',
     unit: '10 кг',
     endDate: '2022.06.01',
@@ -479,11 +479,182 @@ export const ReceiveHealthFoodData = [
     notNormal: false,
   },
   {
-    image: require('../assets/images/1rhool.png'),
+    image: require('../assets/images/chinjuu.png'),
     name: 'Чинжүү',
     unit: '2 кг',
     endDate: '2022.06.01',
     normal: false,
     notNormal: false,
+  },
+];
+
+export const RequirementData = [
+  {
+    title: 'Гурилтай шөл ',
+    status: 'Хянасан',
+    grade: 'Бага анги',
+    category: 'Уух зүйл',
+    action: '1500 хоол',
+    date: '2022.09.08 09:15',
+    dayOfWeek: 'Даваа гариг',
+  },
+  {
+    title: 'Иж бүрдэл хоол ',
+    status: 'Шаардлага хангаагүй',
+    grade: 'Бага анги',
+    category: 'Уух зүйл',
+    action: 'дахин олгох',
+    date: '2022.09.08 09:15',
+    dayOfWeek: 'Даваа гариг',
+  },
+  {
+    title: 'Ширхэгийн хоол',
+    status: 'шаардсан',
+    grade: 'Бага анги',
+    category: 'Уух зүйл',
+    action: 'олгох',
+    date: '2022.09.08 09:15',
+    dayOfWeek: 'Даваа гариг',
+  },
+  {
+    title: 'Цуйвангийн иж бүрдэл',
+    status: 'шаардсан',
+    grade: 'Бага анги',
+    category: 'Уух зүйл',
+    action: 'олгох',
+    date: '2022.09.08 09:15',
+    dayOfWeek: 'Даваа гариг',
+  },
+  {
+    title: 'Сүүтэй цай',
+    status: 'Олгосон',
+    grade: 'Бага анги',
+    category: 'Уух зүйл',
+    action: 'хянах',
+    date: '2022.09.08 09:15',
+    dayOfWeek: 'Даваа гариг',
+  },
+  {
+    title: 'Мөөгтэй хуурга ',
+    status: 'шаардсан',
+    grade: 'Бага анги',
+    category: 'Уух зүйл',
+    action: 'олгох',
+    date: '2022.09.08 09:15',
+    dayOfWeek: 'Даваа гариг',
+  },
+];
+
+export const RequirementDetailData = [
+  {
+    status: 'Хянасан',
+    date: '2022.03.22',
+    senderName: 'БУРМАА',
+    note: 'Олгох бүтээгдэхүүний хугацааг сайн шалгаж өгнө үү',
+  },
+  {
+    status: 'Олгосон',
+    date: '2022.03.22',
+    senderName: 'БУРМАА',
+    note: 'Олгох бүтээгдэхүүний хугацааг сайн шалгаж өгнө үү',
+  },
+  {
+    status: 'Шаардлага хангаагүй',
+    date: '2022.03.22',
+    senderName: 'БУРМАА',
+    note: 'Олгох бүтээгдэхүүний хугацааг сайн шалгаж өгнө үү',
+  },
+  {
+    status: 'Олгосон',
+    date: '2022.03.22',
+    senderName: 'БУРМАА',
+    note: 'Олгох бүтээгдэхүүний хугацааг сайн шалгаж өгнө үү',
+  },
+];
+
+export const RequirementDetailPopUpData1 = [
+  {
+    image: require('../assets/images/baitsai.png'),
+    productName: 'Байцаа',
+    qty: '10 кг',
+    accepted: false,
+  },
+  {
+    image: require('../assets/images/tums.png'),
+    productName: 'Төмс',
+    qty: '2кг',
+    accepted: true,
+  },
+  {
+    image: require('../assets/images/chinjuu.png'),
+    productName: 'Чинжүү',
+    qty: '2кг',
+    accepted: true,
+  },
+  {
+    image: require('../assets/images/chinjuu.png'),
+    productName: 'Чинжүү',
+    qty: '2кг',
+    accepted: false,
+  },
+  {
+    image: require('../assets/images/chinjuu.png'),
+    productName: 'Чинжүү',
+    qty: '2кг',
+    accepted: true,
+  },
+];
+export const RequirementDetailPopUpData2 = [
+  {
+    image: require('../assets/images/mah.png'),
+    productName: 'Үхрийн мах / ясгүй',
+    qty: '30 кг',
+  },
+  {
+    image: require('../assets/images/mah.png'),
+    productName: 'Үхрийн мах / ясгүй',
+    qty: '30 кг',
+  },
+  {
+    image: require('../assets/images/mah.png'),
+    productName: 'Үхрийн мах / ясгүй',
+    qty: '30 кг',
+  },
+  {
+    image: require('../assets/images/mah.png'),
+    productName: 'Үхрийн мах / ясгүй',
+    qty: '30 кг',
+  },
+  {
+    image: require('../assets/images/mah.png'),
+    productName: 'Үхрийн мах / ясгүй',
+    qty: '30 кг',
+  },
+];
+
+export const RequireMentGiveData = [
+  {
+    image: require('../assets/images/mah.png'),
+    name: 'Үхрийн мах / ясгүй',
+    wantedSize: '30 кг',
+    containerSize: '30 кг',
+  },
+  {
+    image: require('../assets/images/mah.png'),
+    name: 'Үхрийн мах / ясгүй',
+    wantedSize: '30 кг',
+    containerSize: '30 кг',
+  },
+  {
+    image: require('../assets/images/mah.png'),
+    name: 'Үхрийн мах / ясгүй',
+    wantedSize: '30 кг',
+    containerSize: '30 кг',
+  },
+  {
+    image: require('../assets/images/mah.png'),
+    name: 'Үхрийн мах / ясгүй',
+    wantedSize: '30 кг',
+    containerSize: '30 кг',
   },
 ];

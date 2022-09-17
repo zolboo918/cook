@@ -13,6 +13,7 @@ export const FONTS = {
   mulishRegular: 'Mulish-Regular',
   mulishSemiBold: 'Mulish-SemiBold',
   mulishBold: 'Mulish-Bold',
+  comissionerItalic: 'commissioner-italic',
 };
 
 export const shadowStyle = {
